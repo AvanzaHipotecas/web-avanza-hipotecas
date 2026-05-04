@@ -337,7 +337,7 @@ const Contact = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">1</div>
+                    <div className="w-8 h-8 min-w-8 min-h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">1</div>
                     <div>
                       <div className="font-semibold text-[#1A3C40]">Análisis de tu perfil</div>
                       <div className="text-gray-600 text-sm">Estudiamos tu situación financiera y necesidades específicas</div>
@@ -345,7 +345,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">2</div>
+                    <div className="w-8 h-8 min-w-8 min-h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">2</div>
                     <div>
                       <div className="font-semibold text-[#1A3C40]">Búsqueda personalizada</div>
                       <div className="text-gray-600 text-sm">Comparamos ofertas entre más de 20 bancos</div>
@@ -353,7 +353,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">3</div>
+                    <div className="w-8 h-8 min-w-8 min-h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">3</div>
                     <div>
                       <div className="font-semibold text-[#1A3C40]">Presentación de opciones</div>
                       <div className="text-gray-600 text-sm">Te presentamos las mejores ofertas adaptadas a tu caso</div>
@@ -361,7 +361,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">4</div>
+                    <div className="w-8 h-8 min-w-8 min-h-8 bg-[#2EBFA5] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1 flex-shrink-0">4</div>
                     <div>
                       <div className="font-semibold text-[#1A3C40]">Gestión completa</div>
                       <div className="text-gray-600 text-sm">Nos encargamos de toda la tramitación hasta la firma</div>

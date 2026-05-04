@@ -1,16 +1,16 @@
 import React from 'react';
     import { motion } from 'framer-motion';
     import { useNavigate } from 'react-router-dom';
-    import { ArrowRight, Shield, Clock, TrendingUp } from 'lucide-react';
+    import { ArrowRight, TrendingUp } from 'lucide-react';
     import { Button } from '@/components/ui/button';
 
     const Hero = () => {
       const navigate = useNavigate();
       
-      const benefits = [
-        { icon: Shield, text: 'Estudio gratuito y sin compromiso' },
-        { icon: Clock, text: 'Ahorra tiempo y dinero' },
-        { icon: TrendingUp, text: 'Consigue las mejores condiciones del mercado' }
+      const highlights = [
+        'Financiación hasta el 100%',
+        'Estudio gratuito y sin compromiso',
+        'Respondemos en menos de 24 horas',
       ];
 
       const handleContactClick = () => {
@@ -42,7 +42,7 @@ import React from 'react';
                   transition={{ delay: 0.2 }}
                   className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-[#1A3C40]"
                 >
-                  Encuentra la mejor <span className="block text-[#2EBFA5]">hipoteca</span> para tu hogar
+                  ¿Listo para comprar<span className="block text-[#2EBFA5]">tu primera vivienda?</span>
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -50,8 +50,7 @@ import React from 'react';
                   transition={{ delay: 0.4 }}
                   className="text-xl md:text-2xl mb-8 text-gray-600"
                 >
-                  Un asesor experto negocia por ti entre más de 20 bancos.
-                  <span className="block font-semibold text-[#1A3C40] mt-2"> Ahorra tiempo, dinero y esfuerzo. </span>
+                  Negociamos con más de 20 bancos para conseguirte la mejor hipoteca. Sin complicaciones, sin perder tiempo y con un experto a tu lado desde el primer día.
                 </motion.p>
                 
                 <motion.div
@@ -93,12 +92,12 @@ import React from 'react';
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
-                  className="space-y-4"
+                  className="space-y-3"
                 >
-                  {benefits.map((benefit, index) => (
+                  {highlights.map((text, index) => (
                     <div key={index} className="flex items-center space-x-3 justify-center lg:justify-start">
-                      <benefit.icon className="w-5 h-5 text-[#2EBFA5]" />
-                      <span className="text-gray-700">{benefit.text}</span>
+                      <span className="text-[#2EBFA5] font-bold text-lg">✓</span>
+                      <span className="text-gray-700 font-medium">{text}</span>
                     </div>
                   ))}
                 </motion.div>

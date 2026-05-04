@@ -7,6 +7,7 @@ import MortgageTypes from '@/components/MortgageTypes';
 import Trust from '@/components/Trust';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
+import Testimonials from '@/components/Testimonials';
 
 const HomePage = () => {
   return (
@@ -26,8 +27,9 @@ const HomePage = () => {
       <BankPartners />
       <MortgageTypes />
       <Trust />
-      <FAQ />
       <Contact />
+      <Testimonials />
+      <FAQ />
     </main>
   );
 };

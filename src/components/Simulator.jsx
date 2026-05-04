@@ -6,78 +6,60 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
 
-/* ─── ITP por comunidad (provincia → { ccaa, itp, label }) ─── */
+/* ─── ITP por comunidad (provincia → { ccaa, itp, label }) — orden alfabético ─── */
 const PROVINCES = [
-  // Andalucía 7%
-  { value: 'almeria',    label: 'Almería',              ccaa: 'Andalucía',           itp: 0.07 },
-  { value: 'cadiz',      label: 'Cádiz',                ccaa: 'Andalucía',           itp: 0.07 },
-  { value: 'cordoba',    label: 'Córdoba',              ccaa: 'Andalucía',           itp: 0.07 },
-  { value: 'granada',    label: 'Granada',              ccaa: 'Andalucía',           itp: 0.07 },
-  { value: 'huelva',     label: 'Huelva',               ccaa: 'Andalucía',           itp: 0.07 },
-  { value: 'jaen',       label: 'Jaén',                 ccaa: 'Andalucía',           itp: 0.07 },
-  { value: 'malaga',     label: 'Málaga',               ccaa: 'Andalucía',           itp: 0.07 },
-  { value: 'sevilla',    label: 'Sevilla',              ccaa: 'Andalucía',           itp: 0.07 },
-  // Aragón 8%
-  { value: 'huesca',     label: 'Huesca',               ccaa: 'Aragón',              itp: 0.08 },
-  { value: 'teruel',     label: 'Teruel',               ccaa: 'Aragón',              itp: 0.08 },
-  { value: 'zaragoza',   label: 'Zaragoza',             ccaa: 'Aragón',              itp: 0.08 },
-  // Asturias 8%
-  { value: 'asturias',   label: 'Asturias',             ccaa: 'Asturias',            itp: 0.08 },
-  // Baleares 8%
-  { value: 'baleares',   label: 'Islas Baleares',       ccaa: 'Baleares',            itp: 0.08 },
-  // Canarias 6.5% IGIC
-  { value: 'laspalmas',  label: 'Las Palmas',           ccaa: 'Canarias',            itp: 0.065, igic: true },
-  { value: 'tenerife',   label: 'Santa Cruz de Tenerife', ccaa: 'Canarias',          itp: 0.065, igic: true },
-  // Cantabria 10%
-  { value: 'cantabria',  label: 'Cantabria',            ccaa: 'Cantabria',           itp: 0.10 },
-  // Castilla-La Mancha 9%
-  { value: 'albacete',   label: 'Albacete',             ccaa: 'Castilla-La Mancha',  itp: 0.09 },
-  { value: 'ciudadreal', label: 'Ciudad Real',          ccaa: 'Castilla-La Mancha',  itp: 0.09 },
-  { value: 'cuenca',     label: 'Cuenca',               ccaa: 'Castilla-La Mancha',  itp: 0.09 },
-  { value: 'guadalajara',label: 'Guadalajara',          ccaa: 'Castilla-La Mancha',  itp: 0.09 },
-  { value: 'toledo',     label: 'Toledo',               ccaa: 'Castilla-La Mancha',  itp: 0.09 },
-  // Castilla y León 8%
-  { value: 'avila',      label: 'Ávila',                ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'burgos',     label: 'Burgos',               ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'leon',       label: 'León',                 ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'palencia',   label: 'Palencia',             ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'salamanca',  label: 'Salamanca',            ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'segovia',    label: 'Segovia',              ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'soria',      label: 'Soria',                ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'valladolid', label: 'Valladolid',           ccaa: 'Castilla y León',     itp: 0.08 },
-  { value: 'zamora',     label: 'Zamora',               ccaa: 'Castilla y León',     itp: 0.08 },
-  // Cataluña 10%
-  { value: 'barcelona',  label: 'Barcelona',            ccaa: 'Cataluña',            itp: 0.10 },
-  { value: 'girona',     label: 'Girona',               ccaa: 'Cataluña',            itp: 0.10 },
-  { value: 'lleida',     label: 'Lleida',               ccaa: 'Cataluña',            itp: 0.10 },
-  { value: 'tarragona',  label: 'Tarragona',            ccaa: 'Cataluña',            itp: 0.10 },
-  // C. Valenciana 10%
-  { value: 'alicante',   label: 'Alicante',             ccaa: 'C. Valenciana',       itp: 0.10 },
-  { value: 'castellon',  label: 'Castellón',            ccaa: 'C. Valenciana',       itp: 0.10 },
-  { value: 'valencia',   label: 'Valencia',             ccaa: 'C. Valenciana',       itp: 0.10 },
-  // Extremadura 8%
-  { value: 'badajoz',    label: 'Badajoz',              ccaa: 'Extremadura',         itp: 0.08 },
-  { value: 'caceres',    label: 'Cáceres',              ccaa: 'Extremadura',         itp: 0.08 },
-  // Galicia 10%
-  { value: 'acoruna',    label: 'A Coruña',             ccaa: 'Galicia',             itp: 0.10 },
-  { value: 'lugo',       label: 'Lugo',                 ccaa: 'Galicia',             itp: 0.10 },
-  { value: 'ourense',    label: 'Ourense',              ccaa: 'Galicia',             itp: 0.10 },
-  { value: 'pontevedra', label: 'Pontevedra',           ccaa: 'Galicia',             itp: 0.10 },
-  // La Rioja 7%
-  { value: 'larioja',    label: 'La Rioja',             ccaa: 'La Rioja',            itp: 0.07 },
-  // Madrid 6%
-  { value: 'madrid',     label: 'Madrid',               ccaa: 'Madrid',              itp: 0.06 },
-  // Murcia 8%
-  { value: 'murcia',     label: 'Murcia',               ccaa: 'Murcia',              itp: 0.08 },
-  // Navarra 6%
-  { value: 'navarra',    label: 'Navarra',              ccaa: 'Navarra',             itp: 0.06 },
-  // País Vasco 4%
-  { value: 'alava',      label: 'Álava',                ccaa: 'País Vasco',          itp: 0.04 },
-  { value: 'guipuzcoa',  label: 'Guipúzcoa',           ccaa: 'País Vasco',          itp: 0.04 },
-  { value: 'vizcaya',    label: 'Vizcaya',              ccaa: 'País Vasco',          itp: 0.04 },
-  // Ceuta / Melilla 6%
-  { value: 'ceuta',      label: 'Ceuta',                ccaa: 'Ceuta',               itp: 0.06 },
-  { value: 'melilla',    label: 'Melilla',              ccaa: 'Melilla',             itp: 0.06 },
+  { value: 'acoruna',    label: 'A Coruña',               ccaa: 'Galicia',             itp: 0.10 },
+  { value: 'alava',      label: 'Álava',                  ccaa: 'País Vasco',          itp: 0.04 },
+  { value: 'albacete',   label: 'Albacete',               ccaa: 'Castilla-La Mancha',  itp: 0.09 },
+  { value: 'alicante',   label: 'Alicante',               ccaa: 'C. Valenciana',       itp: 0.10 },
+  { value: 'almeria',    label: 'Almería',                ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'asturias',   label: 'Asturias',               ccaa: 'Asturias',            itp: 0.08 },
+  { value: 'avila',      label: 'Ávila',                  ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'badajoz',    label: 'Badajoz',                ccaa: 'Extremadura',         itp: 0.08 },
+  { value: 'barcelona',  label: 'Barcelona',              ccaa: 'Cataluña',            itp: 0.10 },
+  { value: 'burgos',     label: 'Burgos',                 ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'caceres',    label: 'Cáceres',                ccaa: 'Extremadura',         itp: 0.08 },
+  { value: 'cadiz',      label: 'Cádiz',                  ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'cantabria',  label: 'Cantabria',              ccaa: 'Cantabria',           itp: 0.10 },
+  { value: 'castellon',  label: 'Castellón',              ccaa: 'C. Valenciana',       itp: 0.10 },
+  { value: 'ceuta',      label: 'Ceuta',                  ccaa: 'Ceuta',               itp: 0.06 },
+  { value: 'ciudadreal', label: 'Ciudad Real',            ccaa: 'Castilla-La Mancha',  itp: 0.09 },
+  { value: 'cordoba',    label: 'Córdoba',                ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'cuenca',     label: 'Cuenca',                 ccaa: 'Castilla-La Mancha',  itp: 0.09 },
+  { value: 'girona',     label: 'Girona',                 ccaa: 'Cataluña',            itp: 0.10 },
+  { value: 'granada',    label: 'Granada',                ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'guadalajara',label: 'Guadalajara',            ccaa: 'Castilla-La Mancha',  itp: 0.09 },
+  { value: 'guipuzcoa',  label: 'Guipúzcoa',             ccaa: 'País Vasco',          itp: 0.04 },
+  { value: 'huelva',     label: 'Huelva',                 ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'huesca',     label: 'Huesca',                 ccaa: 'Aragón',              itp: 0.08 },
+  { value: 'baleares',   label: 'Islas Baleares',         ccaa: 'Baleares',            itp: 0.08 },
+  { value: 'jaen',       label: 'Jaén',                   ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'larioja',    label: 'La Rioja',               ccaa: 'La Rioja',            itp: 0.07 },
+  { value: 'laspalmas',  label: 'Las Palmas',             ccaa: 'Canarias',            itp: 0.065, igic: true },
+  { value: 'leon',       label: 'León',                   ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'lleida',     label: 'Lleida',                 ccaa: 'Cataluña',            itp: 0.10 },
+  { value: 'lugo',       label: 'Lugo',                   ccaa: 'Galicia',             itp: 0.10 },
+  { value: 'madrid',     label: 'Madrid',                 ccaa: 'Madrid',              itp: 0.06 },
+  { value: 'malaga',     label: 'Málaga',                 ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'melilla',    label: 'Melilla',                ccaa: 'Melilla',             itp: 0.06 },
+  { value: 'murcia',     label: 'Murcia',                 ccaa: 'Murcia',              itp: 0.08 },
+  { value: 'navarra',    label: 'Navarra',                ccaa: 'Navarra',             itp: 0.06 },
+  { value: 'ourense',    label: 'Ourense',                ccaa: 'Galicia',             itp: 0.10 },
+  { value: 'palencia',   label: 'Palencia',               ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'pontevedra', label: 'Pontevedra',             ccaa: 'Galicia',             itp: 0.10 },
+  { value: 'salamanca',  label: 'Salamanca',              ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'tenerife',   label: 'Santa Cruz de Tenerife', ccaa: 'Canarias',            itp: 0.065, igic: true },
+  { value: 'segovia',    label: 'Segovia',                ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'sevilla',    label: 'Sevilla',                ccaa: 'Andalucía',           itp: 0.07 },
+  { value: 'soria',      label: 'Soria',                  ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'tarragona',  label: 'Tarragona',              ccaa: 'Cataluña',            itp: 0.10 },
+  { value: 'teruel',     label: 'Teruel',                 ccaa: 'Aragón',              itp: 0.08 },
+  { value: 'toledo',     label: 'Toledo',                 ccaa: 'Castilla-La Mancha',  itp: 0.09 },
+  { value: 'valencia',   label: 'Valencia',               ccaa: 'C. Valenciana',       itp: 0.10 },
+  { value: 'valladolid', label: 'Valladolid',             ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'vizcaya',    label: 'Vizcaya',                ccaa: 'País Vasco',          itp: 0.04 },
+  { value: 'zamora',     label: 'Zamora',                 ccaa: 'Castilla y León',     itp: 0.08 },
+  { value: 'zaragoza',   label: 'Zaragoza',               ccaa: 'Aragón',              itp: 0.08 },
 ];
 
 /* ─── Gastos fijos ─── */

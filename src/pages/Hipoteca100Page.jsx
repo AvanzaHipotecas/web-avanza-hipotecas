@@ -13,6 +13,7 @@ import { Select } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 import emailjs from '@emailjs/browser';
+import Testimonials from '@/components/Testimonials';
 
 const FAQItem = ({ faq, index, openIndex, onToggle }) => (
   <motion.div
@@ -285,21 +286,6 @@ const Hipoteca100Page = () => {
         </div>
       </section>
 
-      {/* ── FAQ ── */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A3C40] mb-4">Preguntas <span className="text-[#2EBFA5]">frecuentes</span></h2>
-            <p className="text-xl text-gray-600">Todo lo que necesitas saber sobre la Hipoteca 100%</p>
-          </motion.div>
-          <div className="max-w-4xl mx-auto">
-            {faqs.map((faq, i) => (
-              <FAQItem key={i} faq={faq} index={i} openIndex={openFAQ} onToggle={(idx) => setOpenFAQ(openFAQ === idx ? null : idx)} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── FORMULARIO ── */}
       <section id="contacto-h100" className="py-20 bg-[#E9ECEF]">
         <div className="container mx-auto px-4">
@@ -402,6 +388,24 @@ const Hipoteca100Page = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIOS ── */}
+      <Testimonials />
+
+      {/* ── FAQ ── */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A3C40] mb-4">Preguntas <span className="text-[#2EBFA5]">frecuentes</span></h2>
+            <p className="text-xl text-gray-600">Todo lo que necesitas saber sobre la Hipoteca 100%</p>
+          </motion.div>
+          <div className="max-w-4xl mx-auto">
+            {faqs.map((faq, i) => (
+              <FAQItem key={i} faq={faq} index={i} openIndex={openFAQ} onToggle={(idx) => setOpenFAQ(openFAQ === idx ? null : idx)} />
+            ))}
           </div>
         </div>
       </section>

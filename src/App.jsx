@@ -21,6 +21,7 @@ import PoliticaCookiesPage from '@/pages/PoliticaCookiesPage';
 import AvisoLegalPage from '@/pages/AvisoLegalPage';
 import PoliticaPrivacidadPage from '@/pages/PoliticaPrivacidadPage';
 import CookieBanner from '@/components/CookieBanner';
+import ScrollToTop from '@/components/ScrollToTop';
 import { Toaster } from '@/components/ui/toaster';
 import { AnimatePresence } from 'framer-motion';
 
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      <ScrollToTop />
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

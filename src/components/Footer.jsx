@@ -1,46 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Home, Phone, Mail, MapPin, Shield, FileText, Users } from 'lucide-react';
+import { Home, Phone, Mail, MapPin, Shield, FileText, Users, Instagram, BadgeCheck } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const handleScrollToContact = e => {
-    e.preventDefault();
-    document.getElementById('contacto')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
-  const footerLinks = {
+const footerLinks = {
     servicios: [{
-      name: 'Hipoteca primera vivienda',
-      href: '#contacto'
+      name: 'Hipoteca 100%',
+      href: '/hipoteca-100'
     }, {
-      name: 'Hipoteca segunda vivienda',
-      href: '#contacto'
+      name: 'Hipoteca 100% + Gastos',
+      href: '/hipoteca-100-gastos'
     }, {
-      name: 'Subrogación hipotecaria',
-      href: '#contacto'
+      name: 'Hipoteca Joven',
+      href: '/hipoteca-joven'
     }, {
-      name: 'Reunificación de deudas',
-      href: '#contacto'
+      name: 'Hipoteca Funcionarios',
+      href: '/hipoteca-funcionarios'
     }, {
-      name: 'Hipoteca para no residentes',
-      href: '#contacto'
+      name: 'Hipoteca No Residentes',
+      href: '/hipoteca-no-residentes'
+    }, {
+      name: 'Hipoteca + Reforma',
+      href: '/hipoteca-reforma'
     }],
     recursos: [{
       name: 'Simulador hipoteca',
       href: '/simulador'
     }, {
       name: 'Calculadora gastos',
-      href: '#'
-    }, {
-      name: 'Guía del comprador',
-      href: '#'
+      href: '/simulador'
     }, {
       name: 'Blog hipotecario',
-      href: '#'
+      href: '/blog'
     }, {
       name: 'Preguntas frecuentes',
-      href: '#'
+      href: '/#faq'
     }],
     legal: [{
       name: 'Aviso legal',
@@ -51,12 +45,6 @@ const Footer = () => {
     }, {
       name: 'Política de cookies',
       href: '/politica-cookies'
-    }, {
-      name: 'Condiciones de uso',
-      href: '#'
-    }, {
-      name: 'RGPD',
-      href: '#'
     }]
   };
   return <footer className="bg-[#1A3C40] text-white">
@@ -94,6 +82,18 @@ const Footer = () => {
                     <span>Madrid, España</span>
                   </div>
                 </div>
+
+                <div className="mt-6">
+                  <a
+                    href="https://www.instagram.com/avanzahipotecas"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-[#2EBFA5] transition-colors duration-200"
+                    aria-label="Instagram de Avanza Hipotecas"
+                  >
+                    <Instagram className="w-5 h-5 text-white" />
+                  </a>
+                </div>
               </motion.div>
 
               <motion.div initial={{
@@ -113,7 +113,7 @@ const Footer = () => {
                 </h3>
                 <ul className="space-y-3">
                   {footerLinks.servicios.map((link, index) => <li key={index}>
-                      <a href={link.href} onClick={handleScrollToContact} className="text-gray-300 hover:text-white transition-colors duration-200 text-sm cursor-pointer">
+                      <a href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
                         {link.name}
                       </a>
                     </li>)}
@@ -215,7 +215,20 @@ const Footer = () => {
         y: 0
       }} viewport={{
         once: true
-      }} className="mt-8 p-4 bg-gray-800/50 rounded-lg">
+      }} className="mt-6 flex items-center gap-2 text-sm text-gray-300">
+              <BadgeCheck className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+              <span>Intermediario de crédito inmobiliario inscrito en el Registro del Banco de España con el número <strong>E515</strong></span>
+            </motion.div>
+
+            <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} className="mt-4 p-4 bg-gray-800/50 rounded-lg">
               <p className="text-xs text-gray-400 leading-relaxed">
                 <strong>Aviso importante:</strong> Avanza Hipotecas actúa como intermediario de crédito, no como prestamista. 
                 Las condiciones finales dependerán de la evaluación de cada entidad financiera. Los tipos de interés mostrados 

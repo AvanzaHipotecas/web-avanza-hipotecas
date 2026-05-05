@@ -42,7 +42,7 @@ import React from 'react';
                   transition={{ delay: 0.2 }}
                   className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-[#1A3C40]"
                 >
-                  ¿Listo para comprar<span className="block text-[#2EBFA5]">tu primera vivienda?</span>
+                  Encontramos y negociamos<span className="block text-[#2EBFA5]">la mejor hipoteca para ti</span>
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}

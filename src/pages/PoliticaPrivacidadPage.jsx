@@ -100,22 +100,31 @@ const sections = [
     title: 'Conservación de los datos',
     content: (
       <>
-        <p className="mb-3">Los datos se conservarán conforme a los siguientes criterios:</p>
-        <div className="space-y-2 not-prose">
+        <p className="mb-4">El período de conservación de sus datos personales varía en función de la relación que mantenga con nosotros:</p>
+        <div className="space-y-3 not-prose">
           {[
-            { tipo: 'Usuarios que solicitan información', plazo: 'Durante el tiempo necesario para gestionar la solicitud.' },
-            { tipo: 'Leads con consentimiento para marketing', plazo: 'Mientras no retiren el consentimiento y durante un máximo de 3 años sin interacción.' },
-            { tipo: 'Clientes', plazo: 'Durante la relación contractual y posteriormente durante los plazos legalmente exigidos (hasta 6 años).' },
+            {
+              n: 1,
+              tipo: 'Usuarios que solicitan información',
+              plazo: 'Sus datos se conservarán mientras sean necesarios para atender su consulta y durante el período en que pueda ejercerse cualquier reclamación derivada de la misma. Una vez resuelta su solicitud, procederemos a su supresión o anonimización, salvo que exista otra base legítima que justifique su conservación.',
+            },
+            {
+              n: 2,
+              tipo: 'Leads con consentimiento para comunicaciones comerciales',
+              plazo: 'Si nos ha dado su consentimiento para recibir información comercial, conservaremos sus datos mientras dicho consentimiento permanezca vigente. Podrá retirar su consentimiento en cualquier momento, momento a partir del cual cesaremos el envío de comunicaciones y procederemos a la supresión de sus datos en el plazo legalmente establecido.',
+            },
+            {
+              n: 3,
+              tipo: 'Clientes',
+              plazo: 'Los datos de quienes hayan contratado nuestros servicios se conservarán durante la vigencia de la relación contractual y, una vez finalizada esta, durante los plazos previstos por la normativa aplicable, incluyendo la legislación civil, mercantil, fiscal y de prevención del blanqueo de capitales, con el fin de atender posibles responsabilidades legales o requerimientos de las autoridades competentes.',
+            },
           ].map((row) => (
-            <div key={row.tipo} className="bg-[#E9ECEF] rounded-xl px-5 py-3">
-              <p className="font-semibold text-[#1A3C40] text-sm">{row.tipo}</p>
-              <p className="text-gray-600 text-sm mt-0.5">{row.plazo}</p>
+            <div key={row.n} className="bg-[#E9ECEF] rounded-xl px-5 py-4">
+              <p className="font-semibold text-[#1A3C40] text-sm mb-1">{row.n}. {row.tipo}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{row.plazo}</p>
             </div>
           ))}
         </div>
-        <p className="mt-3 text-sm">
-          Transcurridos dichos plazos, los datos podrán ser eliminados o anonimizados.
-        </p>
       </>
     ),
   },
@@ -137,16 +146,20 @@ const sections = [
     title: 'Encargados de tratamiento',
     content: (
       <>
-        <p className="mb-3">
-          Para la gestión de los datos se utilizan herramientas de terceros que actúan como encargados
-          de tratamiento:
+        <p className="mb-4">
+          Para la prestación de nuestros servicios, contamos con proveedores externos que actúan como
+          encargados del tratamiento en los términos del artículo 28 del Reglamento (UE) 2016/679 (RGPD).
+          Dichos proveedores únicamente tratan los datos conforme a nuestras instrucciones y están
+          obligados contractualmente a adoptar las medidas de seguridad adecuadas.
         </p>
         <div className="grid sm:grid-cols-2 gap-2 not-prose">
           {[
-            { name: 'Notion', desc: 'Gestión de clientes' },
-            { name: 'n8n', desc: 'Automatización de procesos' },
-            { name: 'WhatsApp Business', desc: 'Comunicación con clientes' },
-            { name: 'Hostinger', desc: 'Alojamiento web' },
+            { name: 'Proveedor de alojamiento web', desc: 'Infraestructura y hospedaje de la plataforma.' },
+            { name: 'Proveedor de CRM y gestión de clientes', desc: 'Organización y seguimiento de consultas y expedientes.' },
+            { name: 'Proveedor de automatización de procesos', desc: 'Gestión automatizada de flujos de trabajo internos.' },
+            { name: 'Proveedor de comunicaciones digitales', desc: 'Envío de comunicaciones y atención al cliente.' },
+            { name: 'Proveedor de servicios de correo electrónico', desc: 'Envío de notificaciones y confirmaciones.' },
+            { name: 'Proveedor de analítica web', desc: 'Medición del rendimiento y mejora de la experiencia de usuario.' },
           ].map((item) => (
             <div key={item.name} className="bg-[#E9ECEF] rounded-xl px-4 py-3">
               <p className="font-bold text-[#1A3C40] text-sm">{item.name}</p>
@@ -154,9 +167,11 @@ const sections = [
             </div>
           ))}
         </div>
-        <p className="mt-3 text-sm">
-          Algunas de estas herramientas pueden implicar transferencias internacionales de datos,
-          garantizándose el cumplimiento de la normativa aplicable.
+        <p className="mt-4 text-sm">
+          Cuando alguno de estos proveedores esté establecido fuera del Espacio Económico Europeo o implique
+          transferencias internacionales de datos, nos aseguramos de que dichas transferencias se realizan
+          con las garantías adecuadas previstas en el RGPD, tales como cláusulas contractuales tipo aprobadas
+          por la Comisión Europea u otros mecanismos legalmente reconocidos.
         </p>
       </>
     ),

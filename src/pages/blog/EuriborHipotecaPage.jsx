@@ -15,10 +15,10 @@ const EuriborHipotecaPage = () => {
   return (
     <>
       <Helmet>
-        <title>Qué es el euríbor y cómo afecta a tu hipoteca variable | Avanza Hipotecas</title>
-        <meta name="description" content="Guía completa sobre el euríbor: qué es, cómo se calcula, su evolución histórica y cómo afecta a la cuota de tu hipoteca variable cuando sube o baja." />
-        <meta property="og:title" content="Qué es el euríbor y cómo afecta a tu hipoteca variable | Avanza Hipotecas" />
-        <meta property="og:description" content="Guía completa sobre el euríbor: qué es, cómo se calcula, su evolución histórica y cómo afecta a la cuota de tu hipoteca variable cuando sube o baja." />
+        <title>Qué es el euríbor y cómo afecta a tu hipoteca | Avanza Hipotecas</title>
+        <meta name="description" content="Qué es el euríbor, cómo se calcula y cómo afecta a tu hipoteca variable. Ejemplos reales y qué hacer si sube. Estudio gratuito con Avanza Hipotecas." />
+        <meta property="og:title" content="Qué es el euríbor y cómo afecta a tu hipoteca | Avanza Hipotecas" />
+        <meta property="og:description" content="Qué es el euríbor, cómo se calcula y cómo afecta a tu hipoteca variable. Ejemplos reales y qué hacer si sube. Estudio gratuito con Avanza Hipotecas." />
         <meta property="og:url" content="https://avanzahipotecas.es/blog/que-es-el-euribor" />
         <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
         <meta property="og:type" content="article" />
@@ -149,7 +149,7 @@ const EuriborHipotecaPage = () => {
                 <li><strong>Consultar con un bróker:</strong> para saber si realmente te compensa actuar o si es mejor esperar a que el euríbor baje.</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">En resumen</h2>
+              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Euríbor e hipoteca variable: qué hacer en cada escenario</h2>
               <p>
                 El euríbor es el principal factor que determina cuánto pagas si tienes una hipoteca variable. Entender cómo funciona te permite anticiparte a los cambios y tomar decisiones informadas: cuándo amortizar, cuándo cambiar de tipo, cuándo cambiar de banco.
               </p>

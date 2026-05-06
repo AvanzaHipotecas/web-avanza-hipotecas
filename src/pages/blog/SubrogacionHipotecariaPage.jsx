@@ -15,10 +15,10 @@ const SubrogacionHipotecariaPage = () => {
   return (
     <>
       <Helmet>
-        <title>Subrogación hipotecaria: cómo cambiar de banco y ahorrar | Avanza Hipotecas</title>
-        <meta name="description" content="Qué es la subrogación hipotecaria, cuándo compensa cambiar de banco, cómo calcular el ahorro real y cómo puede ayudarte un bróker hipotecario en el proceso." />
-        <meta property="og:title" content="Subrogación hipotecaria: cómo cambiar de banco y ahorrar | Avanza Hipotecas" />
-        <meta property="og:description" content="Qué es la subrogación hipotecaria, cuándo compensa cambiar de banco, cómo calcular el ahorro real y cómo puede ayudarte un bróker hipotecario en el proceso." />
+        <title>Subrogación hipotecaria: cambia de banco y ahorra | Avanza Hipotecas</title>
+        <meta name="description" content="Qué es la subrogación hipotecaria, cuándo compensa cambiar de banco y cómo calcular el ahorro. Analizamos tu hipoteca gratis con Avanza Hipotecas." />
+        <meta property="og:title" content="Subrogación hipotecaria: cambia de banco y ahorra | Avanza Hipotecas" />
+        <meta property="og:description" content="Qué es la subrogación hipotecaria, cuándo compensa cambiar de banco y cómo calcular el ahorro. Analizamos tu hipoteca gratis con Avanza Hipotecas." />
         <meta property="og:url" content="https://avanzahipotecas.es/blog/subrogacion-hipotecaria" />
         <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
         <meta property="og:type" content="article" />
@@ -179,7 +179,7 @@ const SubrogacionHipotecariaPage = () => {
                 En muchos casos, encontramos ofertas que los clientes no habrían conseguido negociando solos, precisamente porque trabajamos con entidades que no operan con particulares de forma directa.
               </p>
 
-              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Conclusión</h2>
+              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Subrogación hipotecaria: por qué actuar ahora puede ahorrarte miles de euros</h2>
               <p>
                 Si firmaste tu hipoteca hace más de dos o tres años y no la has revisado, es muy probable que hoy puedas conseguir mejores condiciones. El mercado cambia, los bancos compiten por captar hipotecas, y tú tienes más poder de negociación del que crees, especialmente si tu historial de pagos es impecable.
               </p>

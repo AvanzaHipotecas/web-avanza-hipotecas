@@ -16,10 +16,10 @@ const HipotecaFijaVariablePage = () => {
   return (
     <>
       <Helmet>
-        <title>Hipoteca fija o variable en 2026: ¿cuál te conviene más? | Avanza Hipotecas</title>
-        <meta name="description" content="Diferencias entre hipoteca fija y variable en 2026. Pros, contras y cómo elegir según tu perfil y la situación actual del euríbor y los tipos de interés." />
-        <meta property="og:title" content="Hipoteca fija o variable en 2026: ¿cuál te conviene más? | Avanza Hipotecas" />
-        <meta property="og:description" content="Diferencias entre hipoteca fija y variable en 2026. Pros, contras y cómo elegir según tu perfil y la situación actual del euríbor y los tipos de interés." />
+        <title>Hipoteca fija o variable en 2026: guía completa | Avanza Hipotecas</title>
+        <meta name="description" content="Compara hipoteca fija y variable en 2026: diferencias, ventajas y cuál te conviene según tu perfil. Solicita tu estudio gratuito con Avanza Hipotecas." />
+        <meta property="og:title" content="Hipoteca fija o variable en 2026: guía completa | Avanza Hipotecas" />
+        <meta property="og:description" content="Compara hipoteca fija y variable en 2026: diferencias, ventajas y cuál te conviene según tu perfil. Solicita tu estudio gratuito con Avanza Hipotecas." />
         <meta property="og:url" content="https://avanzahipotecas.es/blog/hipoteca-fija-o-variable-2026" />
         <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
         <meta property="og:type" content="article" />
@@ -94,7 +94,7 @@ const HipotecaFijaVariablePage = () => {
                 Esto ha provocado un fenómeno interesante: <strong>los bancos han endurecido sus ofertas de hipotecas fijas</strong> (ya no compiten tan agresivamente como en 2022) mientras que las variables resultan más atractivas para quienes apuestan por que los tipos seguirán bajando. El escenario es abierto.
               </p>
 
-              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Ventajas e inconvenientes de cada opción</h2>
+              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Hipoteca fija vs variable: ventajas e inconvenientes</h2>
 
               <div className="grid sm:grid-cols-2 gap-6 not-prose my-6">
                 <div className="bg-[#E9ECEF] rounded-xl p-6">
@@ -170,7 +170,7 @@ const HipotecaFijaVariablePage = () => {
                 Existe una tercera opción que muchos bancos ofrecen: la hipoteca mixta. Funciona con un tipo fijo durante los primeros años (5, 10 o 15 años) y luego pasa a variable el resto del plazo. Es una alternativa interesante si quieres estabilidad inicial pero prefieres un tipo de partida más ajustado que el fijo puro.
               </p>
 
-              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">La conclusión: no hay una respuesta universal</h2>
+              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Hipoteca fija o variable: cómo decidir con un asesor hipotecario</h2>
               <p>
                 La decisión entre fijo y variable no es matemática pura. Depende de tu perfil de riesgo, de tu situación financiera, del importe y plazo de tu hipoteca, y de la oferta concreta que consigas negociar con los bancos. Por eso lo más inteligente no es buscar la respuesta en internet, sino analizarlo con un experto que conozca las condiciones reales del mercado y pueda comparar las ofertas de más de 20 entidades para tu caso específico.
               </p>

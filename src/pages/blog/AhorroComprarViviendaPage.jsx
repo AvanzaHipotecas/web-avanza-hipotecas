@@ -16,10 +16,10 @@ const AhorroComprarViviendaPage = () => {
   return (
     <>
       <Helmet>
-        <title>¿Cuánto dinero necesito ahorrado para comprar una vivienda? | Avanza Hipotecas</title>
-        <meta name="description" content="Guía completa con los gastos de compraventa, el porcentaje que financian los bancos y cuánto ahorro mínimo necesitas antes de comprar una vivienda en España." />
-        <meta property="og:title" content="¿Cuánto dinero necesito ahorrado para comprar una vivienda? | Avanza Hipotecas" />
-        <meta property="og:description" content="Guía completa con los gastos de compraventa, el porcentaje que financian los bancos y cuánto ahorro mínimo necesitas antes de comprar una vivienda en España." />
+        <title>¿Cuánto dinero necesitas para comprar vivienda? | Avanza Hipotecas</title>
+        <meta name="description" content="Cuánto debes ahorrar para comprar piso en España: entrada, gastos e impuestos con ejemplos reales. Consulta gratuita con Avanza Hipotecas." />
+        <meta property="og:title" content="¿Cuánto dinero necesitas para comprar vivienda? | Avanza Hipotecas" />
+        <meta property="og:description" content="Cuánto debes ahorrar para comprar piso en España: entrada, gastos e impuestos con ejemplos reales. Consulta gratuita con Avanza Hipotecas." />
         <meta property="og:url" content="https://avanzahipotecas.es/blog/cuanto-dinero-necesito-para-comprar-vivienda" />
         <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
         <meta property="og:type" content="article" />
@@ -151,7 +151,7 @@ const AhorroComprarViviendaPage = () => {
                 En estos casos, aunque puedas financiar más del 80%, sí necesitarás cubrir al menos los gastos de compraventa con fondos propios, ya que el banco no suele incluirlos en la hipoteca estándar.
               </p>
 
-              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Recomendación práctica</h2>
+              <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Cuánto ahorrar para comprar piso: recomendación de nuestros asesores</h2>
               <p>
                 Antes de empezar a buscar piso, asegúrate de tener claro cuánto puedes aportar de tu propio bolsillo. Una regla orientativa: <strong>ten ahorrado al menos el 25-30% del precio de la vivienda</strong> que te puedes permitir. Eso cubre la entrada estándar más los gastos, con algo de margen de seguridad.
               </p>

@@ -17,6 +17,11 @@ const EuriborHipotecaPage = () => {
       <Helmet>
         <title>Qué es el euríbor y cómo afecta a tu hipoteca variable | Avanza Hipotecas</title>
         <meta name="description" content="Guía completa sobre el euríbor: qué es, cómo se calcula, su evolución histórica y cómo afecta a la cuota de tu hipoteca variable cuando sube o baja." />
+        <meta property="og:title" content="Qué es el euríbor y cómo afecta a tu hipoteca variable | Avanza Hipotecas" />
+        <meta property="og:description" content="Guía completa sobre el euríbor: qué es, cómo se calcula, su evolución histórica y cómo afecta a la cuota de tu hipoteca variable cuando sube o baja." />
+        <meta property="og:url" content="https://avanzahipotecas.es/blog/que-es-el-euribor" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="article" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/blog/que-es-el-euribor" />
       </Helmet>

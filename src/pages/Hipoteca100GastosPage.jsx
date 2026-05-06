@@ -136,13 +136,29 @@ const Hipoteca100GastosPage = () => {
     },
   ];
 
+  const schemaFAQ = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>Hipoteca 100% + Gastos | Financia precio y gastos de compra | Avanza Hipotecas</title>
         <meta name="description" content="Hipoteca que financia el 100% del precio de compraventa más notaría, registro e impuestos. Sin ahorros para entrada ni gastos. Estudio gratuito con más de 20 bancos." />
+        <meta property="og:title" content="Hipoteca 100% + Gastos | Financia precio y gastos de compra | Avanza Hipotecas" />
+        <meta property="og:description" content="Hipoteca que financia el 100% del precio de compraventa más notaría, registro e impuestos. Sin ahorros para entrada ni gastos. Estudio gratuito con más de 20 bancos." />
+        <meta property="og:url" content="https://avanzahipotecas.es/hipoteca-100-gastos" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/hipoteca-100-gastos" />
+        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
       {/* ── HERO ── */}

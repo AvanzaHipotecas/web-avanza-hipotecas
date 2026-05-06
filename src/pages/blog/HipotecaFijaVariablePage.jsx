@@ -18,6 +18,11 @@ const HipotecaFijaVariablePage = () => {
       <Helmet>
         <title>Hipoteca fija o variable en 2026: ¿cuál te conviene más? | Avanza Hipotecas</title>
         <meta name="description" content="Diferencias entre hipoteca fija y variable en 2026. Pros, contras y cómo elegir según tu perfil y la situación actual del euríbor y los tipos de interés." />
+        <meta property="og:title" content="Hipoteca fija o variable en 2026: ¿cuál te conviene más? | Avanza Hipotecas" />
+        <meta property="og:description" content="Diferencias entre hipoteca fija y variable en 2026. Pros, contras y cómo elegir según tu perfil y la situación actual del euríbor y los tipos de interés." />
+        <meta property="og:url" content="https://avanzahipotecas.es/blog/hipoteca-fija-o-variable-2026" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="article" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/blog/hipoteca-fija-o-variable-2026" />
       </Helmet>

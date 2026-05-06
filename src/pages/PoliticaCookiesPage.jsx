@@ -46,8 +46,7 @@ const PoliticaCookiesPage = () => (
     <Helmet>
       <title>Política de Cookies | Avanza Hipotecas</title>
       <meta name="description" content="Información sobre las cookies utilizadas en avanzahipotecas.es: tipos, finalidad y cómo gestionar tus preferencias de acuerdo con la LSSI-CE y el RGPD." />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://avanzahipotecas.es/politica-cookies" />
+      <meta name="robots" content="noindex, nofollow" />
     </Helmet>
 
     {/* HERO */}

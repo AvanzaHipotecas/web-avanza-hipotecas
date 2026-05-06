@@ -104,6 +104,11 @@ const BlogPage = () => {
       <Helmet>
         <title>Blog de hipotecas | Consejos, guías y novedades | Avanza Hipotecas</title>
         <meta name="description" content="Consejos prácticos, guías completas y novedades sobre hipotecas para que tomes las mejores decisiones. Artículos escritos por expertos en intermediación hipotecaria." />
+        <meta property="og:title" content="Blog de hipotecas | Consejos, guías y novedades | Avanza Hipotecas" />
+        <meta property="og:description" content="Consejos prácticos, guías completas y novedades sobre hipotecas para que tomes las mejores decisiones. Artículos escritos por expertos en intermediación hipotecaria." />
+        <meta property="og:url" content="https://avanzahipotecas.es/blog" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/blog" />
       </Helmet>

@@ -136,13 +136,29 @@ const HipotecaReformaPage = () => {
     },
   ];
 
+  const schemaFAQ = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>Hipoteca + Reforma | Compra y reforma en un solo préstamo | Avanza Hipotecas</title>
         <meta name="description" content="Hipoteca que financia el precio de compra y el coste de la reforma en un solo préstamo. Sin créditos adicionales. Estudio gratuito con comparativa de más de 20 bancos." />
+        <meta property="og:title" content="Hipoteca + Reforma | Compra y reforma en un solo préstamo | Avanza Hipotecas" />
+        <meta property="og:description" content="Hipoteca que financia el precio de compra y el coste de la reforma en un solo préstamo. Sin créditos adicionales. Estudio gratuito con comparativa de más de 20 bancos." />
+        <meta property="og:url" content="https://avanzahipotecas.es/hipoteca-reforma" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/hipoteca-reforma" />
+        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
       {/* ── HERO ── */}

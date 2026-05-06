@@ -136,13 +136,29 @@ const HipotecaNoResidentesPage = () => {
     },
   ];
 
+  const schemaFAQ = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>Hipoteca para No Residentes | Compra vivienda en España desde el extranjero | Avanza Hipotecas</title>
         <meta name="description" content="Hipoteca para no residentes y extranjeros que quieren comprar vivienda en España. Gestión completa a distancia, comparativa de más de 20 bancos. Estudio gratuito sin compromiso." />
+        <meta property="og:title" content="Hipoteca para No Residentes | Compra vivienda en España desde el extranjero | Avanza Hipotecas" />
+        <meta property="og:description" content="Hipoteca para no residentes y extranjeros que quieren comprar vivienda en España. Gestión completa a distancia, comparativa de más de 20 bancos. Estudio gratuito sin compromiso." />
+        <meta property="og:url" content="https://avanzahipotecas.es/hipoteca-no-residentes" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/hipoteca-no-residentes" />
+        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
       {/* ── HERO ── */}

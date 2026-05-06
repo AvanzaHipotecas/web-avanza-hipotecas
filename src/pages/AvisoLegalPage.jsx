@@ -139,8 +139,7 @@ const AvisoLegalPage = () => (
     <Helmet>
       <title>Aviso Legal | Avanza Hipotecas</title>
       <meta name="description" content="Aviso legal de Avanza Consulting Hipotecario SL. Datos identificativos, condiciones de uso, propiedad intelectual y legislación aplicable." />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://avanzahipotecas.es/aviso-legal" />
+      <meta name="robots" content="noindex, nofollow" />
     </Helmet>
 
     {/* HERO */}

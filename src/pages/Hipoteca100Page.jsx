@@ -136,13 +136,29 @@ const Hipoteca100Page = () => {
     },
   ];
 
+  const schemaFAQ = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>Hipoteca 100% | Financia el precio completo de tu vivienda | Avanza Hipotecas</title>
         <meta name="description" content="Consigue una hipoteca que financia el 100% del precio de compraventa. Sin necesidad de ahorros para la entrada. Estudio gratuito y comparativa de más de 20 bancos." />
+        <meta property="og:title" content="Hipoteca 100% | Financia el precio completo de tu vivienda | Avanza Hipotecas" />
+        <meta property="og:description" content="Consigue una hipoteca que financia el 100% del precio de compraventa. Sin necesidad de ahorros para la entrada. Estudio gratuito y comparativa de más de 20 bancos." />
+        <meta property="og:url" content="https://avanzahipotecas.es/hipoteca-100" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/hipoteca-100" />
+        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
       {/* ── HERO ── */}

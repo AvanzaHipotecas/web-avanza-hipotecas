@@ -18,6 +18,11 @@ const AhorroComprarViviendaPage = () => {
       <Helmet>
         <title>¿Cuánto dinero necesito ahorrado para comprar una vivienda? | Avanza Hipotecas</title>
         <meta name="description" content="Guía completa con los gastos de compraventa, el porcentaje que financian los bancos y cuánto ahorro mínimo necesitas antes de comprar una vivienda en España." />
+        <meta property="og:title" content="¿Cuánto dinero necesito ahorrado para comprar una vivienda? | Avanza Hipotecas" />
+        <meta property="og:description" content="Guía completa con los gastos de compraventa, el porcentaje que financian los bancos y cuánto ahorro mínimo necesitas antes de comprar una vivienda en España." />
+        <meta property="og:url" content="https://avanzahipotecas.es/blog/cuanto-dinero-necesito-para-comprar-vivienda" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="article" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/blog/cuanto-dinero-necesito-para-comprar-vivienda" />
       </Helmet>

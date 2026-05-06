@@ -17,6 +17,11 @@ const SubrogacionHipotecariaPage = () => {
       <Helmet>
         <title>Subrogación hipotecaria: cómo cambiar de banco y ahorrar | Avanza Hipotecas</title>
         <meta name="description" content="Qué es la subrogación hipotecaria, cuándo compensa cambiar de banco, cómo calcular el ahorro real y cómo puede ayudarte un bróker hipotecario en el proceso." />
+        <meta property="og:title" content="Subrogación hipotecaria: cómo cambiar de banco y ahorrar | Avanza Hipotecas" />
+        <meta property="og:description" content="Qué es la subrogación hipotecaria, cuándo compensa cambiar de banco, cómo calcular el ahorro real y cómo puede ayudarte un bróker hipotecario en el proceso." />
+        <meta property="og:url" content="https://avanzahipotecas.es/blog/subrogacion-hipotecaria" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="article" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/blog/subrogacion-hipotecaria" />
       </Helmet>

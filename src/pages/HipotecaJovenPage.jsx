@@ -147,16 +147,29 @@ const HipotecaJovenPage = () => {
     },
   ];
 
+  const schemaFAQ = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>Hipoteca Joven | Hasta 95% de financiación para menores de 35 años | Avanza Hipotecas</title>
-        <meta
-          name="description"
-          content="Consigue tu primera hipoteca siendo joven. Financiación hasta el 95%, tipos bonificados, aval del Estado y plazos de hasta 40 años. Asesoramiento gratuito para menores de 35 años."
-        />
+        <meta name="description" content="Consigue tu primera hipoteca siendo joven. Financiación hasta el 95%, tipos bonificados, aval del Estado y plazos de hasta 40 años. Asesoramiento gratuito para menores de 35 años." />
+        <meta property="og:title" content="Hipoteca Joven | Hasta 95% de financiación para menores de 35 años | Avanza Hipotecas" />
+        <meta property="og:description" content="Consigue tu primera hipoteca siendo joven. Financiación hasta el 95%, tipos bonificados, aval del Estado y plazos de hasta 40 años. Asesoramiento gratuito para menores de 35 años." />
+        <meta property="og:url" content="https://avanzahipotecas.es/hipoteca-joven" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/hipoteca-joven" />
+        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
       {/* ── HERO ── */}

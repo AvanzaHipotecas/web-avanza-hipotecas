@@ -214,8 +214,7 @@ const PoliticaPrivacidadPage = () => (
     <Helmet>
       <title>Política de Privacidad | Avanza Hipotecas</title>
       <meta name="description" content="Política de privacidad de Avanza Consulting Hipotecario SL. Información sobre el tratamiento de tus datos personales conforme al RGPD." />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://avanzahipotecas.es/politica-privacidad" />
+      <meta name="robots" content="noindex, nofollow" />
     </Helmet>
 
     {/* HERO */}

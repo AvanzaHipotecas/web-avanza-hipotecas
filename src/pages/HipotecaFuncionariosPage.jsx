@@ -136,13 +136,29 @@ const HipotecaFuncionariosPage = () => {
     },
   ];
 
+  const schemaFAQ = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>Hipoteca para Funcionarios | Aprovecha tu estabilidad laboral | Avanza Hipotecas</title>
         <meta name="description" content="Hipoteca para funcionarios: aprovecha tu estabilidad laboral para conseguir las mejores condiciones del mercado. Financiación hasta el 100%. Estudio gratuito con más de 20 bancos." />
+        <meta property="og:title" content="Hipoteca para Funcionarios | Aprovecha tu estabilidad laboral | Avanza Hipotecas" />
+        <meta property="og:description" content="Hipoteca para funcionarios: aprovecha tu estabilidad laboral para conseguir las mejores condiciones del mercado. Financiación hasta el 100%. Estudio gratuito con más de 20 bancos." />
+        <meta property="og:url" content="https://avanzahipotecas.es/hipoteca-funcionarios" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/hipoteca-funcionarios" />
+        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
       {/* ── HERO ── */}

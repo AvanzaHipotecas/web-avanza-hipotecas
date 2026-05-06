@@ -66,7 +66,7 @@ const SubrogacionHipotecariaPage = () => {
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
 
               <p className="text-xl text-gray-600 font-medium leading-relaxed">
-                Mucha gente asume que la hipoteca que firmó con su banco es para siempre. No lo es. La subrogación hipotecaria te permite cambiar tu hipoteca a otra entidad con mejores condiciones sin necesidad de cancelar el préstamo actual. Y el ahorro, en muchos casos, es muy significativo.
+                Mucha gente asume que la hipoteca que firmó con su banco es para siempre. No lo es. La subrogación hipotecaria te permite cambiar tu hipoteca a otra entidad con mejores condiciones sin necesidad de cancelar el préstamo actual. Y el ahorro, en muchos casos, es muy significativo. Si aún no tienes claro si te conviene <Link to="/blog/hipoteca-fija-o-variable-2026" className="text-[#2EBFA5] font-medium hover:underline">hipoteca fija o variable</Link> para la nueva condición, consulta nuestra guía antes de decidir.
               </p>
 
               <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">¿Qué es exactamente la subrogación hipotecaria?</h2>
@@ -195,6 +195,20 @@ const SubrogacionHipotecariaPage = () => {
               <Button onClick={scrollToContact} className="bg-[#2EBFA5] hover:bg-[#25a28b] text-white font-semibold px-8 py-3 text-lg flex items-center gap-2 mx-auto">
                 Solicita tu consulta gratuita <ArrowRight className="w-5 h-5" />
               </Button>
+            </div>
+
+            <div className="mt-8 border-t border-gray-100 pt-8">
+              <p className="text-sm font-semibold text-[#1A3C40] mb-4">También te puede interesar</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <Link to="/blog/que-es-el-euribor" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Qué es el euríbor y cómo afecta a tu hipoteca</span>
+                </Link>
+                <Link to="/blog/hipoteca-fija-o-variable-2026" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Hipoteca fija o variable en 2026: guía completa</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

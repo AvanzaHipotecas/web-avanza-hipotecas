@@ -145,7 +145,7 @@ const EuriborHipotecaPage = () => {
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Amortización parcial anticipada:</strong> si tienes ahorros, pagar capital reduce el importe pendiente y, por tanto, la cuota futura.</li>
                 <li><strong>Negociar con tu banco una novación:</strong> puedes pedir a tu entidad que cambie el tipo variable por uno fijo. El banco puede aceptar o no, y puede cobrar una comisión.</li>
-                <li><strong>Subrogación hipotecaria:</strong> cambiar tu hipoteca a otro banco que ofrezca mejores condiciones, sea fijo o variable con mejor diferencial.</li>
+                <li><strong><Link to="/blog/subrogacion-hipotecaria" className="text-[#2EBFA5] hover:underline">Subrogación hipotecaria</Link>:</strong> cambiar tu hipoteca a otro banco que ofrezca mejores condiciones, sea fijo o variable con mejor diferencial.</li>
                 <li><strong>Consultar con un bróker:</strong> para saber si realmente te compensa actuar o si es mejor esperar a que el euríbor baje.</li>
               </ul>
 
@@ -165,6 +165,20 @@ const EuriborHipotecaPage = () => {
               <Button onClick={scrollToContact} className="bg-[#2EBFA5] hover:bg-[#25a28b] text-white font-semibold px-8 py-3 text-lg flex items-center gap-2 mx-auto">
                 Solicita tu consulta gratuita <ArrowRight className="w-5 h-5" />
               </Button>
+            </div>
+
+            <div className="mt-8 border-t border-gray-100 pt-8">
+              <p className="text-sm font-semibold text-[#1A3C40] mb-4">También te puede interesar</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <Link to="/blog/hipoteca-fija-o-variable-2026" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Hipoteca fija o variable en 2026: guía completa</span>
+                </Link>
+                <Link to="/blog/subrogacion-hipotecaria" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Subrogación hipotecaria: cómo mejorar tu hipoteca actual</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

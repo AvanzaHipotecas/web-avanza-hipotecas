@@ -88,7 +88,7 @@ const HipotecaFijaVariablePage = () => {
 
               <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">La situación del mercado en 2026</h2>
               <p>
-                Tras las subidas agresivas de tipos del Banco Central Europeo en 2022 y 2023, el BCE inició un ciclo de bajadas a partir de mediados de 2024. En 2026, el euríbor se ha estabilizado en niveles significativamente más bajos que el pico de 2023, aunque todavía lejos de los mínimos históricos negativos de 2021.
+                Tras las subidas agresivas de tipos del Banco Central Europeo en 2022 y 2023, el BCE inició un ciclo de bajadas a partir de mediados de 2024. En 2026, <Link to="/blog/que-es-el-euribor" className="text-[#2EBFA5] font-medium hover:underline">el euríbor</Link> se ha estabilizado en niveles significativamente más bajos que el pico de 2023, aunque todavía lejos de los mínimos históricos negativos de 2021.
               </p>
               <p>
                 Esto ha provocado un fenómeno interesante: <strong>los bancos han endurecido sus ofertas de hipotecas fijas</strong> (ya no compiten tan agresivamente como en 2022) mientras que las variables resultan más atractivas para quienes apuestan por que los tipos seguirán bajando. El escenario es abierto.
@@ -186,6 +186,20 @@ const HipotecaFijaVariablePage = () => {
               <Button onClick={scrollToContact} className="bg-[#2EBFA5] hover:bg-[#25a28b] text-white font-semibold px-8 py-3 text-lg flex items-center gap-2 mx-auto">
                 Solicita tu consulta gratuita <ArrowRight className="w-5 h-5" />
               </Button>
+            </div>
+
+            <div className="mt-8 border-t border-gray-100 pt-8">
+              <p className="text-sm font-semibold text-[#1A3C40] mb-4">También te puede interesar</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <Link to="/hipoteca-100" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Hipoteca 100%: financia el precio completo sin entrada</span>
+                </Link>
+                <Link to="/blog/subrogacion-hipotecaria" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Subrogación hipotecaria: cómo cambiar de banco y ahorrar</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -79,7 +79,7 @@ const AhorroComprarViviendaPage = () => {
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Hipoteca al 90%:</strong> posible en algunos perfiles con ingresos sólidos y buena solvencia.</li>
-                <li><strong>Hipoteca al 100%:</strong> disponible para determinados perfiles, normalmente a través de un bróker hipotecario que accede a entidades especializadas.</li>
+                <li><strong><Link to="/hipoteca-100" className="text-[#2EBFA5] font-medium hover:underline">Hipoteca al 100%</Link>:</strong> disponible para determinados perfiles, normalmente a través de un bróker hipotecario que accede a entidades especializadas.</li>
                 <li><strong>Jóvenes menores de 35 años:</strong> el aval del Estado puede facilitar el acceso a mayor financiación.</li>
               </ul>
 
@@ -144,7 +144,7 @@ const AhorroComprarViviendaPage = () => {
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Trabajar con un bróker hipotecario que acceda a entidades que financian el 90% o el 100%.</li>
-                <li>Aprovechar el aval del Estado si eres menor de 35 años y cumples los requisitos.</li>
+                <li>Aprovechar el <Link to="/hipoteca-joven" className="text-[#2EBFA5] font-medium hover:underline">aval del Estado si eres menor de 35 años</Link> y cumples los requisitos.</li>
                 <li>Presentar una operación sólida: ingresos altos, historial limpio y sin deudas.</li>
               </ul>
               <p>
@@ -167,6 +167,20 @@ const AhorroComprarViviendaPage = () => {
               <Button onClick={scrollToContact} className="bg-[#2EBFA5] hover:bg-[#25a28b] text-white font-semibold px-8 py-3 text-lg flex items-center gap-2 mx-auto">
                 Solicita tu consulta gratuita <ArrowRight className="w-5 h-5" />
               </Button>
+            </div>
+
+            <div className="mt-8 border-t border-gray-100 pt-8">
+              <p className="text-sm font-semibold text-[#1A3C40] mb-4">También te puede interesar</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <Link to="/hipoteca-100" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Hipoteca 100%: financia sin necesidad de entrada</span>
+                </Link>
+                <Link to="/hipoteca-joven" className="flex items-center gap-3 bg-[#E9ECEF] rounded-xl px-4 py-3 hover:bg-[#2EBFA5]/10 transition-colors group">
+                  <ArrowRight className="w-4 h-4 text-[#2EBFA5] flex-shrink-0" />
+                  <span className="text-sm font-medium text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors">Hipoteca Joven: condiciones especiales para menores de 35</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

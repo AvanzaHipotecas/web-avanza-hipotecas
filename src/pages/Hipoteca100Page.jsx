@@ -14,6 +14,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 import emailjs from '@emailjs/browser';
 import Testimonials from '@/components/Testimonials';
+import { Link } from 'react-router-dom';
 
 const FAQItem = ({ faq, index, openIndex, onToggle }) => (
   <motion.div
@@ -410,6 +411,37 @@ const Hipoteca100Page = () => {
 
       {/* ── TESTIMONIOS ── */}
       <Testimonials />
+
+      {/* ── TAMBIÉN TE PUEDE INTERESAR ── */}
+      <section className="py-12 bg-[#F8F9FA]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl font-bold text-[#1A3C40] mb-5 text-center">También te puede interesar</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link to="/hipoteca-100-gastos" className="bg-white rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-shadow border border-gray-100 hover:border-[#2EBFA5]/40 group">
+                <div className="w-10 h-10 bg-[#2EBFA5]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FileText className="w-5 h-5 text-[#2EBFA5]" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors text-sm">Hipoteca 100% + Gastos</p>
+                  <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">¿Necesitas cubrir también los gastos de compraventa e impuestos? Financiamos el precio completo más los gastos</p>
+                </div>
+                <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0 group-hover:text-[#2EBFA5] transition-colors" />
+              </Link>
+              <Link to="/hipoteca-joven" className="bg-white rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-shadow border border-gray-100 hover:border-[#2EBFA5]/40 group">
+                <div className="w-10 h-10 bg-[#2EBFA5]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users className="w-5 h-5 text-[#2EBFA5]" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-[#1A3C40] group-hover:text-[#2EBFA5] transition-colors text-sm">Hipoteca Joven</p>
+                  <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">¿Tienes menos de 35 años? Accede a condiciones exclusivas y mayor financiación para tu primera vivienda</p>
+                </div>
+                <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0 group-hover:text-[#2EBFA5] transition-colors" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── FAQ ── */}
       <section className="py-20 bg-white">

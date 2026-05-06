@@ -88,6 +88,9 @@ const HomePage = () => {
         <meta property="og:description" content="Especialistas en conseguir las mejores condiciones hipotecarias. Un asesor experto negocia por ti entre más de 20 bancos. Estudio gratuito y sin compromiso." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://avanzahipotecas.es/" />
+        <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="keywords" content="hipoteca, préstamo hipotecario, financiación vivienda, asesor hipotecario, broker hipotecario Madrid, mejores condiciones hipoteca" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://avanzahipotecas.es/" />

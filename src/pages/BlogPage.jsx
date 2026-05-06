@@ -7,6 +7,17 @@ import { Button } from '@/components/ui/button';
 
 const ARTICLES = [
   {
+    slug: 'hipoteca-al-100-como-conseguirla-2026',
+    title: 'Cómo conseguir una hipoteca al 100% en 2026',
+    category: 'Guías',
+    categoryColor: 'bg-blue-100 text-blue-700',
+    excerpt: 'Las tres vías reales para financiar el 100% de una vivienda: aval ICO del Estado, convenios propios de Avanza Hipotecas con entidades financieras y pignoración de activos. Descubre cuál encaja con tu perfil.',
+    readTime: '8 min',
+    date: '6 mayo 2026',
+    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80',
+    imageAlt: 'Vivienda moderna con financiación hipotecaria al 100%',
+  },
+  {
     slug: 'hipoteca-joven-2026-requisitos',
     title: 'Hipoteca joven 2026: requisitos y bancos que la conceden',
     category: 'Guías',

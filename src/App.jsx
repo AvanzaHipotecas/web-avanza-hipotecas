@@ -23,6 +23,7 @@ const AhorroComprarViviendaPage   = lazy(() => import('@/pages/blog/AhorroCompra
 const EuriborHipotecaPage         = lazy(() => import('@/pages/blog/EuriborHipotecaPage'));
 const SubrogacionHipotecariaPage  = lazy(() => import('@/pages/blog/SubrogacionHipotecariaPage'));
 const HipotecaJoven2026Page       = lazy(() => import('@/pages/blog/HipotecaJoven2026Page'));
+const Hipoteca100ComoConseguirlaPage = lazy(() => import('@/pages/blog/Hipoteca100ComoConseguirlaPage'));
 const PoliticaCookiesPage      = lazy(() => import('@/pages/PoliticaCookiesPage'));
 const AvisoLegalPage           = lazy(() => import('@/pages/AvisoLegalPage'));
 const PoliticaPrivacidadPage   = lazy(() => import('@/pages/PoliticaPrivacidadPage'));
@@ -52,6 +53,7 @@ function App() {
             <Route path="/blog/que-es-el-euribor"                             element={<EuriborHipotecaPage />} />
             <Route path="/blog/subrogacion-hipotecaria"                       element={<SubrogacionHipotecariaPage />} />
             <Route path="/blog/hipoteca-joven-2026-requisitos"                element={<HipotecaJoven2026Page />} />
+            <Route path="/blog/hipoteca-al-100-como-conseguirla-2026"         element={<Hipoteca100ComoConseguirlaPage />} />
             <Route path="/politica-cookies"                                    element={<PoliticaCookiesPage />} />
             <Route path="/aviso-legal"                                         element={<AvisoLegalPage />} />
             <Route path="/politica-privacidad"                                 element={<PoliticaPrivacidadPage />} />

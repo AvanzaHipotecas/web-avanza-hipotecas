@@ -7,6 +7,17 @@ import { Button } from '@/components/ui/button';
 
 const ARTICLES = [
   {
+    slug: 'hipoteca-joven-2026-requisitos',
+    title: 'Hipoteca joven 2026: requisitos y bancos que la conceden',
+    category: 'Guías',
+    categoryColor: 'bg-blue-100 text-blue-700',
+    excerpt: 'Todo lo que necesitas saber sobre la hipoteca joven en 2026: requisitos de edad, las dos vías para conseguir el 100% de financiación y por qué un bróker puede marcar la diferencia.',
+    readTime: '7 min',
+    date: '6 mayo 2026',
+    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80',
+    imageAlt: 'Jóvenes recibiendo las llaves de su primer piso',
+  },
+  {
     slug: 'hipoteca-fija-o-variable-2026',
     title: 'Hipoteca fija o variable en 2026: ¿cuál te conviene más?',
     category: 'Consejos',

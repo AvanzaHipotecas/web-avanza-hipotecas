@@ -14,7 +14,7 @@ const ARTICLES = [
     excerpt: 'Las tres vías reales para financiar el 100% de una vivienda: aval ICO del Estado, convenios propios de Avanza Hipotecas con entidades financieras y pignoración de activos. Descubre cuál encaja con tu perfil.',
     readTime: '8 min',
     date: '6 mayo 2026',
-    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80&fm=webp',
     imageAlt: 'Vivienda moderna con financiación hipotecaria al 100%',
   },
   {
@@ -25,7 +25,7 @@ const ARTICLES = [
     excerpt: 'Todo lo que necesitas saber sobre la hipoteca joven en 2026: requisitos de edad, las dos vías para conseguir el 100% de financiación y por qué un bróker puede marcar la diferencia.',
     readTime: '7 min',
     date: '6 mayo 2026',
-    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80&fm=webp',
     imageAlt: 'Jóvenes recibiendo las llaves de su primer piso',
   },
   {
@@ -36,7 +36,7 @@ const ARTICLES = [
     excerpt: 'Las diferencias clave entre hipoteca fija y variable, ventajas e inconvenientes de cada tipo, y cómo elegir según tu perfil y la situación actual del mercado en 2026.',
     readTime: '5 min',
     date: '28 abril 2026',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80&fm=webp',
     imageAlt: 'Gráficos financieros y tipos de interés',
   },
   {
@@ -47,7 +47,7 @@ const ARTICLES = [
     excerpt: 'Desglose completo de los gastos de compraventa, el porcentaje habitual que financian los bancos y cuánto ahorro mínimo necesitas antes de empezar a buscar piso.',
     readTime: '4 min',
     date: '20 abril 2026',
-    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80&fm=webp',
     imageAlt: 'Ahorro para comprar vivienda',
   },
   {
@@ -58,7 +58,7 @@ const ARTICLES = [
     excerpt: 'Explicación clara de qué es el euríbor, cómo se calcula la cuota en una hipoteca variable, su evolución histórica y qué puedes hacer cuando sube.',
     readTime: '6 min',
     date: '12 abril 2026',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fm=webp',
     imageAlt: 'Datos financieros y euríbor',
   },
   {
@@ -69,7 +69,7 @@ const ARTICLES = [
     excerpt: 'Qué es la subrogación de hipoteca, cuándo compensa hacerla, cómo calcular si el cambio de banco te ahorra dinero y qué papel juega un bróker en el proceso.',
     readTime: '5 min',
     date: '5 abril 2026',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fm=webp',
     imageAlt: 'Firma de documentos hipotecarios',
   },
 ];
@@ -83,7 +83,7 @@ const ArticleCard = ({ article, index }) => (
     className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#2EBFA5]/30 hover:shadow-lg transition-all duration-300 flex flex-col"
   >
     <div className="relative h-52 overflow-hidden">
-      <img src={article.image} alt={article.imageAlt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      <img src={article.image} alt={article.imageAlt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
     </div>
     <div className="p-6 flex flex-col flex-1">
       <div className="flex items-center gap-3 mb-3">

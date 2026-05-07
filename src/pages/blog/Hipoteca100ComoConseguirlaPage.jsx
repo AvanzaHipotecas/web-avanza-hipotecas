@@ -30,9 +30,10 @@ const Hipoteca100ComoConseguirlaPage = () => {
       <section className="pt-24 bg-white">
         <div className="relative h-72 md:h-96 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1200&q=80"
+            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1200&q=80&fm=webp"
             alt="Vivienda moderna con financiación hipotecaria al 100%"
             className="w-full h-full object-cover"
+            fetchpriority="high"
           />
           <div className="absolute inset-0 bg-[#1A3C40]/70" />
           <div className="absolute inset-0 flex items-end">

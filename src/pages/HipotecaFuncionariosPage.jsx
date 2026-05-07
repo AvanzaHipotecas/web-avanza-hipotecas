@@ -213,7 +213,7 @@ const HipotecaFuncionariosPage = () => {
               className="hidden lg:block"
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Oficina profesional moderna que transmite estabilidad y confianza" className="rounded-3xl shadow-2xl w-full object-cover h-[480px]" />
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&fm=webp" alt="Oficina profesional moderna que transmite estabilidad y confianza" className="rounded-3xl shadow-2xl w-full object-cover h-[480px]" loading="lazy" />
                 <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3">
                   <div className="w-12 h-12 bg-[#2EBFA5] rounded-full flex items-center justify-center">
                     <Award className="w-6 h-6 text-white" />

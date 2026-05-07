@@ -60,9 +60,10 @@ import React from 'react';
                   className="lg:hidden my-8 relative"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1581573950452-5a438c5f390f"
+                    src="https://images.unsplash.com/photo-1581573950452-5a438c5f390f?w=800&q=80&fm=webp"
                     alt="Familia feliz en su nuevo hogar"
                     className="rounded-3xl shadow-2xl w-full h-auto"
+                    fetchpriority="high"
                   />
                    <div className="absolute inset-0 bg-[#1A3C40] opacity-40 rounded-3xl"></div>
                 </motion.div>
@@ -112,7 +113,9 @@ import React from 'react';
                   <img
                     className="rounded-3xl shadow-2xl"
                     alt="Familia feliz en su nuevo hogar"
-                   src="https://images.unsplash.com/photo-1581573950452-5a438c5f390f" />
+                    src="https://images.unsplash.com/photo-1581573950452-5a438c5f390f?w=1200&q=80&fm=webp"
+                    fetchpriority="high"
+                  />
                   <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3">
                     <div className="w-12 h-12 bg-[#2EBFA5] rounded-full flex items-center justify-center">
                       <TrendingUp className="w-6 h-6 text-white"/>

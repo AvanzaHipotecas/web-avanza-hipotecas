@@ -248,9 +248,10 @@ const HipotecaJovenPage = () => {
             >
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80&fm=webp"
                   alt="Pareja joven comprando su primera vivienda"
                   className="rounded-3xl shadow-2xl w-full object-cover h-[480px]"
+                  loading="lazy"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3">
                   <div className="w-12 h-12 bg-[#2EBFA5] rounded-full flex items-center justify-center">

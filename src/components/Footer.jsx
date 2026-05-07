@@ -60,7 +60,7 @@ const footerLinks = {
           once: true
         }} className="lg:col-span-1">
                 <div className="flex items-center space-x-2 mb-6">
-                   <img src="https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/logofooter-ohN7n.png" alt="Logo de Avanza Hipotecas para el pie de página" className="h-14 w-auto" />
+                   <img src="https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/logofooter-ohN7n.png" alt="Logo de Avanza Hipotecas para el pie de página" className="h-14 w-auto" loading="lazy" />
                 </div>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">

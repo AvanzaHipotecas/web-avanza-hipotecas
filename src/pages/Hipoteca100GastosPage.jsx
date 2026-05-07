@@ -213,7 +213,7 @@ const Hipoteca100GastosPage = () => {
               className="hidden lg:block"
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&fm=webp" alt="Persona firmando documentos de compraventa" className="rounded-3xl shadow-2xl w-full object-cover h-[480px]" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=75&fm=webp" alt="Persona firmando documentos de compraventa" className="rounded-3xl shadow-2xl w-full object-cover h-[480px]" width="800" height="480" loading="lazy" />
                 <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3">
                   <div className="w-12 h-12 bg-[#2EBFA5] rounded-full flex items-center justify-center">
                     <Wallet className="w-6 h-6 text-white" />

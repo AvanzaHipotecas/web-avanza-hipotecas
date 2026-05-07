@@ -73,6 +73,8 @@ const BankPartners = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
+                  width="150"
+                  height="60"
                   loading="lazy"
                   className="h-auto w-full object-contain"
                   style={{ maxHeight: '60px' }}

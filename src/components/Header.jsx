@@ -54,12 +54,14 @@ const Header = () => {
                 src="https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/transparente---copia-5zX4t.png"
                 alt="Logo Avanza Hipotecas"
                 className="h-16 w-auto"
+                width="64" height="64"
                 fetchpriority="high"
               />
               <img
                 src="https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/0---copia-2-xf8ce.png"
                 alt="Avanza Hipotecas"
                 className="h-10 w-auto hidden sm:block"
+                width="160" height="40"
                 fetchpriority="high"
               />
             </Link>

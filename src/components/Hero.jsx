@@ -6,7 +6,7 @@ import React from 'react';
 
     const Hero = () => {
       const navigate = useNavigate();
-      
+
       const highlights = [
         'Financiación hasta el 100%',
         'Estudio gratuito y sin compromiso',
@@ -23,8 +23,8 @@ import React from 'react';
       };
 
       return (
-        <section 
-          id="inicio" 
+        <section
+          id="inicio"
           className="min-h-screen flex items-center relative overflow-hidden bg-white pt-32 lg:pt-24"
         >
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
@@ -52,21 +52,6 @@ import React from 'react';
                 >
                   Negociamos con más de 20 bancos para conseguirte la mejor hipoteca. Sin complicaciones, sin perder tiempo y con un experto a tu lado desde el primer día.
                 </motion.p>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="lg:hidden my-8 relative"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1581573950452-5a438c5f390f?w=800&q=80&fm=webp"
-                    alt="Familia feliz en su nuevo hogar"
-                    className="rounded-3xl shadow-2xl w-full h-auto"
-                    fetchpriority="high"
-                  />
-                   <div className="absolute inset-0 bg-[#1A3C40] opacity-40 rounded-3xl"></div>
-                </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -107,15 +92,22 @@ import React from 'react';
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="hidden lg:block"
               >
-                <div className="relative">
-                  <img
-                    className="rounded-3xl shadow-2xl"
-                    alt="Familia feliz en su nuevo hogar"
-                    src="https://images.unsplash.com/photo-1581573950452-5a438c5f390f?w=1200&q=80&fm=webp"
-                    fetchpriority="high"
-                  />
+                <div className="relative mt-8 lg:mt-0">
+                  <picture>
+                    <source
+                      media="(min-width: 1024px)"
+                      srcSet="https://images.unsplash.com/photo-1581573950452-5a438c5f390f?w=1200&q=75&fm=webp"
+                    />
+                    <img
+                      src="https://images.unsplash.com/photo-1581573950452-5a438c5f390f?w=800&q=75&fm=webp"
+                      alt="Familia feliz en su nuevo hogar"
+                      className="rounded-3xl shadow-2xl w-full h-auto"
+                      width="800"
+                      height="533"
+                      fetchpriority="high"
+                    />
+                  </picture>
                   <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3">
                     <div className="w-12 h-12 bg-[#2EBFA5] rounded-full flex items-center justify-center">
                       <TrendingUp className="w-6 h-6 text-white"/>

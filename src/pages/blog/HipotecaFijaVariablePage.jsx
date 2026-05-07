@@ -31,9 +31,11 @@ const HipotecaFijaVariablePage = () => {
       <section className="pt-24 bg-white">
         <div className="relative h-72 md:h-96 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fm=webp"
+            src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=75&fm=webp"
             alt="Gráficos financieros y tipos de interés"
             className="w-full h-full object-cover"
+            width="1200"
+            height="400"
             fetchpriority="high"
           />
           <div className="absolute inset-0 bg-[#1A3C40]/70" />

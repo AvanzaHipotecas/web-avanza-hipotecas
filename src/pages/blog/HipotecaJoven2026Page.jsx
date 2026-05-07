@@ -31,9 +31,11 @@ const HipotecaJoven2026Page = () => {
       <section className="pt-24 bg-white">
         <div className="relative h-72 md:h-96 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80&fm=webp"
+            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=75&fm=webp"
             alt="Jóvenes recibiendo las llaves de su primer piso"
             className="w-full h-full object-cover"
+            width="1200"
+            height="400"
             fetchpriority="high"
           />
           <div className="absolute inset-0 bg-[#1A3C40]/70" />

@@ -213,7 +213,7 @@ const Hipoteca100Page = () => {
               className="hidden lg:block"
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fm=webp" alt="Pareja recibiendo las llaves de su nueva vivienda" className="rounded-3xl shadow-2xl w-full object-cover h-[480px]" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=75&fm=webp" alt="Pareja recibiendo las llaves de su nueva vivienda" className="rounded-3xl shadow-2xl w-full object-cover h-[480px]" width="800" height="480" loading="lazy" />
                 <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3">
                   <div className="w-12 h-12 bg-[#2EBFA5] rounded-full flex items-center justify-center">
                     <Percent className="w-6 h-6 text-white" />

@@ -13,17 +13,24 @@ const mortgageItems = [
   { name: 'Hipoteca + Reforma', href: '/hipoteca-reforma' },
 ];
 
+const mejorarItems = [
+  { name: 'Subrogación hipotecaria', href: '/subrogacion-hipotecaria' },
+  { name: 'Cambio de hipoteca', href: '/cambio-hipoteca' },
+  { name: 'Calculadora subrogación', href: '/calculadora-subrogacion' },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHipotecasOpen, setIsHipotecasOpen] = useState(false);
-  const [isMobileHipotecasOpen, setIsMobileHipotecasOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileHipotecasOpen, setMobileHipotecasOpen] = useState(false);
+  const [mobileMejorarOpen, setMobileMejorarOpen] = useState(false);
+  const desktopNavRef = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setIsHipotecasOpen(false);
+      if (desktopNavRef.current && !desktopNavRef.current.contains(e.target)) {
+        setActiveDropdown(null);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -42,14 +49,18 @@ const Header = () => {
     }
   };
 
+  const toggleDropdown = (name) => {
+    setActiveDropdown(prev => prev === name ? null : name);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#2EBFA5] text-white shadow-md">
       <nav className="container mx-auto px-4 py-2">
-        <div className="flex items-center justify-between h-[80px]">
+        <div className="flex items-center h-[80px]">
 
           {/* Logo */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <Link to="/" className="flex items-center space-x-4">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-3">
               <img
                 src="https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/transparente---copia-5zX4t.png"
                 alt="Logo Avanza Hipotecas"
@@ -67,12 +78,12 @@ const Header = () => {
             </Link>
           </motion.div>
 
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop nav — centered */}
+          <div ref={desktopNavRef} className="hidden md:flex flex-1 justify-end items-center gap-7 lg:gap-9 mr-6">
 
             <motion.a
               href="/sobre-nosotros"
-              className="text-white hover:text-gray-200 font-medium transition-colors duration-200"
+              className="text-white hover:text-gray-200 font-semibold text-lg transition-colors duration-200 whitespace-nowrap"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -82,34 +93,71 @@ const Header = () => {
 
             {/* Hipotecas dropdown */}
             <motion.div
-              ref={dropdownRef}
               className="relative"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
               <button
-                className="flex items-center space-x-1 text-white hover:text-gray-200 font-medium transition-colors duration-200"
-                onClick={() => setIsHipotecasOpen(!isHipotecasOpen)}
+                className="flex items-center gap-1 text-white hover:text-gray-200 font-semibold text-lg transition-colors duration-200 whitespace-nowrap"
+                onClick={() => toggleDropdown('hipotecas')}
               >
                 <span>Hipotecas</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isHipotecasOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'hipotecas' ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
-                {isHipotecasOpen && (
+                {activeDropdown === 'hipotecas' && (
                   <motion.div
                     initial={{ opacity: 0, y: -8 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-2 w-60 bg-white rounded-lg shadow-xl py-2 z-50"
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
                   >
                     {mortgageItems.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className="block px-4 py-2.5 text-[#1A3C40] hover:bg-[#2EBFA5]/10 hover:text-[#2EBFA5] transition-colors duration-150 text-sm font-medium"
-                        onClick={() => setIsHipotecasOpen(false)}
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Mejorar hipoteca dropdown */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <button
+                className="flex items-center gap-1 text-white hover:text-gray-200 font-semibold text-lg transition-colors duration-200 whitespace-nowrap"
+                onClick={() => toggleDropdown('mejorar')}
+              >
+                <span>Mejorar hipoteca</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'mejorar' ? 'rotate-180' : ''}`} />
+              </button>
+              <AnimatePresence>
+                {activeDropdown === 'mejorar' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50"
+                  >
+                    {mejorarItems.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="block px-4 py-2.5 text-[#1A3C40] hover:bg-[#2EBFA5]/10 hover:text-[#2EBFA5] transition-colors duration-150 text-sm font-medium"
+                        onClick={() => setActiveDropdown(null)}
                       >
                         {item.name}
                       </a>
@@ -122,36 +170,38 @@ const Header = () => {
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.4 }}
             >
-              <Link to="/simulador" className="text-white hover:text-gray-200 font-medium transition-colors duration-200">
+              <Link to="/simulador" className="text-white hover:text-gray-200 font-semibold text-lg transition-colors duration-200 whitespace-nowrap">
                 Simulador
               </Link>
             </motion.div>
 
             <motion.a
               href="/blog"
-              className="text-white hover:text-gray-200 font-medium transition-colors duration-200"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              Blog
-            </motion.a>
-
-            <motion.div
+              className="text-white hover:text-gray-200 font-semibold text-lg transition-colors duration-200 whitespace-nowrap"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <Button asChild className="bg-[#1A3C40] hover:bg-[#122c30] text-white px-6 py-2 rounded-lg">
-                <a href="/#contacto" onClick={handleScrollToContact}>Consulta Gratuita</a>
-              </Button>
-            </motion.div>
+              Blog
+            </motion.a>
           </div>
 
-          {/* Mobile menu toggle */}
-          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {/* CTA — right, desktop only */}
+          <motion.div
+            className="hidden md:flex flex-shrink-0"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <Button asChild className="bg-[#1A3C40] hover:bg-[#122c30] text-white px-5 py-2 rounded-lg font-semibold text-sm whitespace-nowrap">
+              <a href="/#contacto" onClick={handleScrollToContact}>Consulta Gratuita</a>
+            </Button>
+          </motion.div>
+
+          {/* Mobile toggle */}
+          <button className="md:hidden ml-auto p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Abrir menú">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -162,31 +212,54 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 pb-4 border-t border-white/20 pt-4 bg-[#2EBFA5]"
+            className="md:hidden mt-2 pb-4 border-t border-white/20 pt-4 bg-[#2EBFA5]"
           >
             <a
               href="/sobre-nosotros"
-              className="flex items-center py-3 text-white hover:text-gray-200 transition-colors font-medium"
+              className="flex items-center py-3 text-white hover:text-gray-200 transition-colors font-semibold text-base"
               onClick={() => setIsMenuOpen(false)}
             >
               Sobre nosotros
             </a>
 
-            {/* Mobile Hipotecas accordion */}
+            {/* Mobile — Hipotecas accordion */}
             <button
-              className="flex items-center justify-between w-full py-3 text-white hover:text-gray-200 transition-colors font-medium"
-              onClick={() => setIsMobileHipotecasOpen(!isMobileHipotecasOpen)}
+              className="flex items-center justify-between w-full py-3 text-white hover:text-gray-200 transition-colors font-semibold text-base"
+              onClick={() => setMobileHipotecasOpen(!mobileHipotecasOpen)}
             >
               <span>Hipotecas</span>
-              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileHipotecasOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileHipotecasOpen ? 'rotate-180' : ''}`} />
             </button>
-            {isMobileHipotecasOpen && (
-              <div className="pl-4 border-l-2 border-white/30 ml-2 mb-2">
+            {mobileHipotecasOpen && (
+              <div className="pl-4 border-l-2 border-white/30 ml-2 mb-2 space-y-1">
                 {mortgageItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="block py-2 text-white/90 hover:text-white text-sm transition-colors"
+                    className="block py-2.5 text-white/90 hover:text-white text-sm font-medium transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            )}
+
+            {/* Mobile — Mejorar hipoteca accordion */}
+            <button
+              className="flex items-center justify-between w-full py-3 text-white hover:text-gray-200 transition-colors font-semibold text-base"
+              onClick={() => setMobileMejorarOpen(!mobileMejorarOpen)}
+            >
+              <span>Mejorar hipoteca</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileMejorarOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileMejorarOpen && (
+              <div className="pl-4 border-l-2 border-white/30 ml-2 mb-2 space-y-1">
+                {mejorarItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block py-2.5 text-white/90 hover:text-white text-sm font-medium transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -197,7 +270,7 @@ const Header = () => {
 
             <Link
               to="/simulador"
-              className="flex items-center py-3 text-white hover:text-gray-200 transition-colors font-medium"
+              className="flex items-center py-3 text-white hover:text-gray-200 transition-colors font-semibold text-base"
               onClick={() => setIsMenuOpen(false)}
             >
               Simulador
@@ -205,13 +278,13 @@ const Header = () => {
 
             <a
               href="/blog"
-              className="flex items-center py-3 text-white hover:text-gray-200 transition-colors font-medium"
+              className="flex items-center py-3 text-white hover:text-gray-200 transition-colors font-semibold text-base"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
             </a>
 
-            <Button asChild className="bg-[#1A3C40] hover:bg-[#122c30] text-white w-full mt-4 py-3 rounded-lg">
+            <Button asChild className="bg-[#1A3C40] hover:bg-[#122c30] text-white w-full mt-4 py-3 rounded-lg font-semibold text-base">
               <a href="/#contacto" onClick={handleScrollToContact}>Consulta Gratuita</a>
             </Button>
           </motion.div>

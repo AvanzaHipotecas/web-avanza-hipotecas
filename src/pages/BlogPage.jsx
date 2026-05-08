@@ -7,6 +7,17 @@ import { Button } from '@/components/ui/button';
 
 const ARTICLES = [
   {
+    slug: 'subrogacion-hipotecaria-guia-completa',
+    title: 'Subrogación hipotecaria: cómo cambiar de banco y ahorrar miles de euros',
+    category: 'Guías',
+    categoryColor: 'bg-blue-100 text-blue-700',
+    excerpt: 'Guía completa sobre la subrogación hipotecaria: qué es, cuándo te conviene, diferencias con la novación y un ejemplo real de 28.000€ ahorrados. Todo lo que necesitas saber antes de actuar.',
+    readTime: '8 min',
+    date: '8 mayo 2026',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=75&fm=webp',
+    imageAlt: 'Documentos hipotecarios y calculadora para cambiar de banco',
+  },
+  {
     slug: 'hipoteca-al-100-como-conseguirla-2026',
     title: 'Cómo conseguir una hipoteca al 100% en 2026',
     category: 'Guías',

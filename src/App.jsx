@@ -22,8 +22,12 @@ const HipotecaFijaVariablePage    = lazy(() => import('@/pages/blog/HipotecaFija
 const AhorroComprarViviendaPage   = lazy(() => import('@/pages/blog/AhorroComprarViviendaPage'));
 const EuriborHipotecaPage         = lazy(() => import('@/pages/blog/EuriborHipotecaPage'));
 const SubrogacionHipotecariaPage  = lazy(() => import('@/pages/blog/SubrogacionHipotecariaPage'));
+const SubrogacionGuiaCompletaPage = lazy(() => import('@/pages/blog/SubrogacionGuiaCompletaPage'));
 const HipotecaJoven2026Page       = lazy(() => import('@/pages/blog/HipotecaJoven2026Page'));
 const Hipoteca100ComoConseguirlaPage = lazy(() => import('@/pages/blog/Hipoteca100ComoConseguirlaPage'));
+const SubrogacionHipotecariaProductPage = lazy(() => import('@/pages/SubrogacionHipotecariaProductPage'));
+const CambioHipotecaPage       = lazy(() => import('@/pages/CambioHipotecaPage'));
+const CalculadoraSubrogacionPage = lazy(() => import('@/pages/CalculadoraSubrogacionPage'));
 const PoliticaCookiesPage      = lazy(() => import('@/pages/PoliticaCookiesPage'));
 const AvisoLegalPage           = lazy(() => import('@/pages/AvisoLegalPage'));
 const PoliticaPrivacidadPage   = lazy(() => import('@/pages/PoliticaPrivacidadPage'));
@@ -52,8 +56,12 @@ function App() {
             <Route path="/blog/cuanto-dinero-necesito-para-comprar-vivienda"  element={<AhorroComprarViviendaPage />} />
             <Route path="/blog/que-es-el-euribor"                             element={<EuriborHipotecaPage />} />
             <Route path="/blog/subrogacion-hipotecaria"                       element={<SubrogacionHipotecariaPage />} />
+            <Route path="/blog/subrogacion-hipotecaria-guia-completa"         element={<SubrogacionGuiaCompletaPage />} />
             <Route path="/blog/hipoteca-joven-2026-requisitos"                element={<HipotecaJoven2026Page />} />
             <Route path="/blog/hipoteca-al-100-como-conseguirla-2026"         element={<Hipoteca100ComoConseguirlaPage />} />
+            <Route path="/subrogacion-hipotecaria"                             element={<SubrogacionHipotecariaProductPage />} />
+            <Route path="/cambio-hipoteca"                                     element={<CambioHipotecaPage />} />
+            <Route path="/calculadora-subrogacion"                             element={<CalculadoraSubrogacionPage />} />
             <Route path="/politica-cookies"                                    element={<PoliticaCookiesPage />} />
             <Route path="/aviso-legal"                                         element={<AvisoLegalPage />} />
             <Route path="/politica-privacidad"                                 element={<PoliticaPrivacidadPage />} />

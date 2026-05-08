@@ -79,7 +79,7 @@ const Header = () => {
           </motion.div>
 
           {/* Desktop nav — centered */}
-          <div ref={desktopNavRef} className="hidden md:flex flex-1 justify-end items-center gap-7 lg:gap-9 mr-6">
+          <div ref={desktopNavRef} className="hidden lg:flex flex-1 justify-end items-center gap-7 xl:gap-9 mr-6">
 
             <motion.a
               href="/sobre-nosotros"
@@ -190,7 +190,7 @@ const Header = () => {
 
           {/* CTA — right, desktop only */}
           <motion.div
-            className="hidden md:flex flex-shrink-0"
+            className="hidden lg:flex flex-shrink-0"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
@@ -201,7 +201,7 @@ const Header = () => {
           </motion.div>
 
           {/* Mobile toggle */}
-          <button className="md:hidden ml-auto p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Abrir menú">
+          <button className="lg:hidden ml-auto p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Abrir menú">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -212,7 +212,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-2 pb-4 border-t border-white/20 pt-4 bg-[#2EBFA5]"
+            className="lg:hidden mt-2 pb-4 border-t border-white/20 pt-4 bg-[#2EBFA5]"
           >
             <a
               href="/sobre-nosotros"

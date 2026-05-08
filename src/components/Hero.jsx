@@ -25,10 +25,10 @@ import React from 'react';
       return (
         <section
           id="inicio"
-          className="min-h-screen flex items-center relative overflow-hidden bg-white pt-32 lg:pt-24"
+          className="relative overflow-hidden bg-white pt-24 pb-12 lg:min-h-screen lg:flex lg:items-center lg:pt-24 lg:pb-0"
         >
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
-          <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="container mx-auto px-4 py-6 lg:py-20 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}

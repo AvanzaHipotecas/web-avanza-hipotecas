@@ -45,7 +45,7 @@ const HipotecaFijaVariableMixtaPage = () => {
     { aspecto: 'Cuota mensual', fija: 'Siempre igual', variable: 'Cambia cada 6-12 meses', mixta: 'Fija al inicio, variable después' },
     { aspecto: 'Tipo de interés', fija: 'Fijo durante todo el préstamo', variable: 'Euríbor + diferencial', mixta: 'Fijo (primeros años) + variable (resto)' },
     { aspecto: 'Riesgo de subida', fija: 'Ninguno', variable: 'Alto si el euríbor sube', mixta: 'Bajo al inicio; moderado al final' },
-    { aspecto: 'Tipo inicial habitual (2026)', fija: '~3,0% – 3,5%', variable: 'Euríbor (2,4%) + 0,60–0,90%', mixta: '~2,5–3,0% fijo + variable' },
+    { aspecto: 'Tipo inicial habitual (2026)', fija: '~2,0% – 2,4%', variable: 'Euríbor (2,4%) + 0,60–0,90%', mixta: '~1,5% – 1,8% fijo + variable' },
     { aspecto: 'Cuota más baja al inicio', fija: 'No (suele ser la más alta)', variable: 'Sí (si el euríbor es bajo)', mixta: 'Sí (tipo fijo inicial más bajo)' },
     { aspecto: 'Ideal para...', fija: 'Perfil conservador, plazo largo', variable: 'Perfil dinámico, plazo corto-medio', mixta: 'Perfil intermedio, plazo medio-largo' },
   ];
@@ -118,13 +118,13 @@ const HipotecaFijaVariableMixtaPage = () => {
               {/* ── 1. FIJA ── */}
               <h2 className="text-2xl font-bold text-[#1A3C40] pt-4">Hipoteca fija: estabilidad ante todo</h2>
               <p>
-                En una hipoteca a tipo fijo, el interés que pagas no cambia en toda la vida del préstamo. Si firmas al 3,20%, pagarás exactamente el mismo porcentaje el primer mes y el último, independientemente de lo que haga el euríbor o los mercados financieros. Tu cuota mensual es constante desde el primer día hasta que terminas de pagar.
+                En una hipoteca a tipo fijo, el interés que pagas no cambia en toda la vida del préstamo. Si firmas al 2,20%, pagarás exactamente el mismo porcentaje el primer mes y el último, independientemente de lo que haga el euríbor o los mercados financieros. Tu cuota mensual es constante desde el primer día hasta que terminas de pagar.
               </p>
               <p>
                 Este modelo tiene una ventaja evidente: la <strong>previsibilidad total</strong>. Sabes exactamente cuánto vas a pagar cada mes, lo que facilita la planificación económica familiar. No te afectan las subidas de tipos ni los vaivenes del mercado. En los momentos de inestabilidad financiera —como los que vivimos entre 2022 y 2023, cuando el euríbor superó el 4%— los titulares de hipotecas fijas no notaron absolutamente nada en su cuota.
               </p>
               <p>
-                La hipoteca fija suele tener un tipo inicial ligeramente más alto que la variable. En 2026, las ofertas competitivas se mueven entre el 3,0% y el 3,5% TAE según el perfil del solicitante. Sin embargo, ese coste adicional es en realidad un <strong>seguro contra la incertidumbre</strong>. Compensa especialmente cuando el plazo es largo (20 o más años) y cuando el comprador tiene un perfil conservador que no quiere incertidumbre en la economía doméstica.
+                En 2026, las ofertas competitivas de hipoteca fija se mueven entre el <strong>2,0% y el 2,4% TAE</strong> según el perfil del solicitante, niveles históricamente muy atractivos. Y, curiosamente, en el contexto actual la fija puede resultar incluso más barata que la variable, porque el euríbor más el diferencial bancario supera el tipo fijo que algunas entidades ofrecen. Ese coste de la certeza se ha reducido mucho, lo que convierte a la hipoteca fija en una opción especialmente interesante en este momento.
               </p>
 
               <div className="not-prose space-y-3 my-4">
@@ -155,7 +155,7 @@ const HipotecaFijaVariableMixtaPage = () => {
                 En épocas de euríbor bajo, la hipoteca variable es claramente la opción más económica. Los años previos a 2022, con el euríbor en negativo, muchos titulares de hipotecas variables pagaban cuotas ridículamente bajas. Pero cuando el euríbor se disparó desde el 0% hasta el 4,16% en apenas 18 meses, muchas familias vieron cómo su cuota mensual subía entre 200 y 400 euros de golpe.
               </p>
               <p>
-                En 2026, con el euríbor en torno al 2,3–2,4%, la hipoteca variable tiene un atractivo renovado. Un diferencial competitivo de +0,70% daría un tipo efectivo de alrededor del 3,1%, lo que supone cuotas similares o incluso inferiores a algunas ofertas de tipo fijo. Pero hay que tener claro que esa cuota puede cambiar en la próxima revisión.
+                En 2026, con el euríbor en torno al 2,3–2,4%, la hipoteca variable parte de un tipo efectivo de alrededor del <strong>3,0–3,3%</strong> (euríbor más el diferencial bancario). Esto significa que, en el escenario actual, la cuota inicial de una variable puede ser más alta que la de una hipoteca fija competitiva. La apuesta de la variable es que el euríbor siga bajando y la cuota se reduzca en futuras revisiones, pero hay que asumir que eso podría no ocurrir —o incluso que el euríbor suba de nuevo.
               </p>
 
               <div className="not-prose space-y-3 my-4">
@@ -183,7 +183,7 @@ const HipotecaFijaVariableMixtaPage = () => {
                 Esta estructura tiene una lógica financiera clara: los primeros años de una hipoteca son los de mayor exposición al riesgo, porque el capital pendiente es elevado y la parte de intereses en cada cuota representa una proporción muy alta del pago total. Al fijar el tipo durante esa etapa inicial, se elimina el riesgo en el momento más crítico. Cuando el préstamo entra en la fase variable, el capital pendiente ya es menor y las oscilaciones del euríbor tienen un impacto más limitado en la cuota.
               </p>
               <p>
-                El tipo fijo inicial de una hipoteca mixta suele ser <strong>más bajo que el de una hipoteca fija pura</strong>, lo que la convierte en una opción especialmente interesante en el contexto actual. Algunas entidades ofrecen primeros diez años por debajo del 2,8%, combinado con un diferencial variable posterior muy ajustado.
+                El tipo fijo inicial de una hipoteca mixta suele ser <strong>más bajo que el de una hipoteca fija pura</strong>, lo que la convierte en la opción con la cuota más baja al inicio. Algunas entidades ofrecen primeros diez años por debajo del 1,8%, combinado con un diferencial variable posterior muy ajustado.
               </p>
               <p>
                 El inconveniente: si el euríbor vuelve a subir significativamente al final del período fijo, la cuota variable puede resultar más alta de lo esperado. Por eso es importante valorar bien el plazo del tramo fijo y la proyección del diferencial antes de firmar.
@@ -244,10 +244,10 @@ const HipotecaFijaVariableMixtaPage = () => {
                       tipo: 'Hipoteca fija',
                       color: 'bg-blue-50',
                       items: [
-                        { label: 'Tipo de interés', value: '3,40% fijo' },
-                        { label: 'Cuota mensual', value: '990 €/mes', highlight: true },
-                        { label: 'Cuota en 5 años', value: '990 €/mes (siempre igual)' },
-                        { label: 'Intereses totales estimados', value: '~97.000 €' },
+                        { label: 'Tipo de interés', value: '2,20% fijo' },
+                        { label: 'Cuota mensual', value: '870 €/mes', highlight: true },
+                        { label: 'Cuota en 5 años', value: '870 €/mes (siempre igual)' },
+                        { label: 'Intereses totales estimados', value: '~61.000 €' },
                         { label: 'Riesgo de subida', value: 'Ninguno' },
                       ],
                     },
@@ -256,9 +256,9 @@ const HipotecaFijaVariableMixtaPage = () => {
                       color: 'bg-amber-50',
                       items: [
                         { label: 'Tipo de interés', value: 'Euríbor (2,40%) + 0,75% = 3,15%' },
-                        { label: 'Cuota mensual inicial', value: '968 €/mes', highlight: true },
-                        { label: 'Cuota si euríbor sube a 3,5%', value: '~1.065 €/mes (+97€)' },
-                        { label: 'Cuota si euríbor baja a 1,5%', value: '~912 €/mes (-56€)' },
+                        { label: 'Cuota mensual inicial', value: '960 €/mes', highlight: true },
+                        { label: 'Cuota si euríbor sube a 3,5%', value: '~1.080 €/mes (+120€)' },
+                        { label: 'Cuota si euríbor baja a 1,5%', value: '~870 €/mes (igual que la fija)' },
                         { label: 'Riesgo de subida', value: 'Moderado-alto' },
                       ],
                     },
@@ -266,10 +266,10 @@ const HipotecaFijaVariableMixtaPage = () => {
                       tipo: 'Hipoteca mixta',
                       color: 'bg-[#2EBFA5]/5',
                       items: [
-                        { label: 'Tipo fijo (primeros 10 años)', value: '2,90%' },
-                        { label: 'Cuota primeros 10 años', value: '937 €/mes', highlight: true },
+                        { label: 'Tipo fijo (primeros 10 años)', value: '1,70%' },
+                        { label: 'Cuota primeros 10 años', value: '820 €/mes', highlight: true },
                         { label: 'Tipo variable (años 11-25)', value: 'Euríbor + 0,80% (según mercado)' },
-                        { label: 'Ahorro vs. fija (10 años)', value: '~6.360 €' },
+                        { label: 'Ahorro vs. fija (10 años)', value: '~6.000 €' },
                         { label: 'Riesgo de subida', value: 'Bajo al inicio; moderado al final' },
                       ],
                     },
@@ -290,7 +290,7 @@ const HipotecaFijaVariableMixtaPage = () => {
               </div>
 
               <p>
-                El ejemplo de María ilustra bien la disyuntiva. La hipoteca mixta ofrece la cuota más baja durante los primeros diez años, lo que supone un ahorro real de más de 6.000€ respecto a la fija en ese período. La variable ofrece una cuota inicial intermedia pero con incertidumbre en las revisiones. La fija es la más cara al inicio pero garantiza que la cuota no cambiará jamás.
+                El ejemplo de María ilustra una realidad poco intuitiva del mercado en 2026: la hipoteca variable es, hoy, la más cara de las tres opciones al inicio, porque el euríbor más el diferencial supera los tipos fijos disponibles. La mixta es la que ofrece la cuota más baja durante los primeros diez años (820€/mes), con un ahorro de unos 6.000€ frente a la fija en ese período. Y la fija, pese a no ser la más barata, ofrece la mayor certeza con una cuota que jamás cambiará.
               </p>
               <p>
                 ¿Cuál es la decisión correcta para María? Depende de su tolerancia al riesgo, sus planes a largo plazo y su capacidad de absorber variaciones. Por eso en Avanza Hipotecas no damos una respuesta estándar: analizamos cada caso individualmente y buscamos las mejores condiciones en función del perfil real de cada cliente. También puedes usar nuestro <Link to="/simulador" className="text-[#2EBFA5] font-medium hover:underline">simulador de hipoteca</Link> para hacerte una idea rápida de las cuotas.

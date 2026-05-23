@@ -7,6 +7,17 @@ import { Button } from '@/components/ui/button';
 
 const ARTICLES = [
   {
+    slug: 'hipoteca-fija-variable-mixta-2026',
+    title: 'Hipoteca fija, variable o mixta en 2026: ¿cuál te conviene?',
+    category: 'Guías',
+    categoryColor: 'bg-blue-100 text-blue-700',
+    excerpt: 'Guía completa para entender las diferencias entre hipoteca fija, variable y mixta en 2026, con tabla comparativa, ejemplo real con tres escenarios y cómo actuar si cambias de opinión.',
+    readTime: '10 min',
+    date: '22 mayo 2026',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=75&fm=webp',
+    imageAlt: 'Persona revisando documentos financieros para elegir hipoteca',
+  },
+  {
     slug: 'subrogacion-hipotecaria-guia-completa',
     title: 'Subrogación hipotecaria: cómo cambiar de banco y ahorrar miles de euros',
     category: 'Guías',

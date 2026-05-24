@@ -82,10 +82,10 @@ const HomePage = () => {
   return (
     <main>
       <Helmet>
-        <title>Avanza Hipotecas - Encuentra la Mejor Hipoteca para tu Hogar</title>
-        <meta name="description" content="Especialistas en conseguir las mejores condiciones hipotecarias. Un asesor experto negocia por ti entre más de 20 bancos. Estudio gratuito y sin compromiso." />
-        <meta property="og:title" content="Avanza Hipotecas - Encuentra la Mejor Hipoteca para tu Hogar" />
-        <meta property="og:description" content="Especialistas en conseguir las mejores condiciones hipotecarias. Un asesor experto negocia por ti entre más de 20 bancos. Estudio gratuito y sin compromiso." />
+        <title>Avanza Hipotecas | Broker Hipotecario — Negociamos tu hipoteca</title>
+        <meta name="description" content="Negociamos con más de 20 bancos para conseguirte la mejor hipoteca. Analizamos tu caso, comparamos ofertas y gestionamos todo el proceso. Estudio gratuito y sin compromiso." />
+        <meta property="og:title" content="Avanza Hipotecas | Broker Hipotecario — Negociamos tu hipoteca" />
+        <meta property="og:description" content="Negociamos con más de 20 bancos para conseguirte la mejor hipoteca. Analizamos tu caso, comparamos ofertas y gestionamos todo el proceso. Estudio gratuito y sin compromiso." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://avanzahipotecas.es/" />
         <meta property="og:image" content="https://avanzahipotecas.es/og-image.jpg" />

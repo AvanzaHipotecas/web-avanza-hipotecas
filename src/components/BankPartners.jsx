@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 
 const logos = [
     { name: 'Abanca', src: 'https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/242e02b46e08dc1aaed3ae50aeacdb10.png', alt: 'Logo de ABANCA' },
-    { name: 'Bankinter', src: 'https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/6a1269f63a410bf52f604facf69ef66c.png', alt: 'Logo de Bankinter' },
-    { name: 'BBVA', src: 'https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/b2a7ffdece14cb8536a4aad91dc09402.png', alt: 'Logo de BBVA' },
+{ name: 'BBVA', src: 'https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/b2a7ffdece14cb8536a4aad91dc09402.png', alt: 'Logo de BBVA' },
     { name: 'CaixaBank', src: 'https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/e7d7dfc3027ac8c88e9bc44d863fb7d9.png', alt: 'Logo de CaixaBank' },
     { name: 'Deutsche Bank', src: 'https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/c8d69509dbff78cfbd26f3c77ccb5468.png', alt: 'Logo de Deutsche Bank' },
     { name: 'Ibercaja', src: 'https://horizons-cdn.hostinger.com/46b65610-3610-4aaa-b75e-344adbd2c5fe/924378e105011a87396ad73902848070.png', alt: 'Logo de Ibercaja' },

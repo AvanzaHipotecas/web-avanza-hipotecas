@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout code
@@ -26,17 +26,16 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          echo "StrictHostKeyChecking no" >> ~/.ssh/config
-          echo "UserKnownHostsFile /dev/null" >> ~/.ssh/config
-
-      - name: Deploy via SFTP
-        run: |
-          sftp -P 65002 -i ~/.ssh/id_ed25519 u777232261@82.25.113.220 << 'EOF'
-          cd /home/u777232261/domains/avanzahipotecas.es/public_html
-          put -r dist/*
-          EOF
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 82.25.113.220
+          username: u777232261.avanzahipotecas.es
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: /public_html/
+          dangerous-clean-slate: true
+          timeout: 60000
+          log-level: verbose

@@ -31,11 +31,12 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -p 65002 82.25.113.220 >> ~/.ssh/known_hosts
+          echo "StrictHostKeyChecking no" >> ~/.ssh/config
+          echo "UserKnownHostsFile /dev/null" >> ~/.ssh/config
 
       - name: Deploy via SFTP
         run: |
-          sftp -P 65002 -r -o StrictHostKeyChecking=no u777232261@82.25.113.220 << 'EOF'
+          sftp -P 65002 -i ~/.ssh/id_ed25519 u777232261@82.25.113.220 << 'EOF'
           cd /home/u777232261/domains/avanzahipotecas.es/public_html
           put -r dist/*
           EOF

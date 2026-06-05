@@ -7,6 +7,17 @@ import { Button } from '@/components/ui/button';
 
 const ARTICLES = [
   {
+    slug: 'hipoteca-para-autonomos-2026',
+    title: 'Hipoteca para autónomos en 2026: cómo conseguirla y qué piden los bancos',
+    category: 'Guías',
+    categoryColor: 'bg-blue-100 text-blue-700',
+    excerpt: 'Qué documentación exigen los bancos a un autónomo, qué perfil tiene más opciones y por qué un bróker hipotecario puede marcar la diferencia entre un rechazo y una aprobación.',
+    readTime: '8 min',
+    date: '5 junio 2026',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=75&fm=webp',
+    imageAlt: 'Autónomo revisando documentos financieros en su oficina',
+  },
+  {
     slug: 'hipoteca-fija-variable-mixta-2026',
     title: 'Hipoteca fija, variable o mixta en 2026: ¿cuál te conviene?',
     category: 'Guías',

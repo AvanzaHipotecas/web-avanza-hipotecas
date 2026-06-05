@@ -8,13 +8,16 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.4.0
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
@@ -35,3 +38,4 @@ jobs:
           protocol: ftps
           local-dir: ./dist/
           server-dir: /public_html/
+          timeout: 30000

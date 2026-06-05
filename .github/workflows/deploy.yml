@@ -26,15 +26,16 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftp
-          local-dir: ./dist/
-          server-dir: /public_html/
-          dangerous-clean-slate: true
-          timeout: 60000
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p 65002 82.25.113.220 >> ~/.ssh/known_hosts
+
+      - name: Deploy via SFTP
+        run: |
+          sftp -P 65002 -r -o StrictHostKeyChecking=no u777232261@82.25.113.220 << 'EOF'
+          cd /home/u777232261/domains/avanzahipotecas.es/public_html
+          put -r dist/*
+          EOF

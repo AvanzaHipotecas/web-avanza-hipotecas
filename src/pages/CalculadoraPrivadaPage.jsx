@@ -194,22 +194,10 @@ const CalculadoraPrivadaPage = () => {
     const precioBanda1 = validoBanda1 ? precio1Raw : null;
 
     // Banda 2 — financiación >90% hasta 100% (plazo hasta 30 años)
-    const precio2Raw = (capacidad30 + ahorroNum - GASTOS_FIJOS) / (1 + itp);
-    const entrada2 = ahorroNum - (itp * precio2Raw + GASTOS_FIJOS);
-    let precioBanda2 = null;
-    let validoBanda2 = false;
-
-    if (entrada2 < 0) {
-      let p = Math.max(0, (ahorroNum - GASTOS_FIJOS) / itp);
-      p = Math.min(p, capacidad30);
-      precioBanda2 = p;
-      validoBanda2 = true;
-    } else if ((entrada2 / precio2Raw) < 0.10) {
-      precioBanda2 = precio2Raw;
-      validoBanda2 = true;
-    } else {
-      validoBanda2 = false;
-    }
+    // El precio se basa únicamente en la capacidad de préstamo por ingresos;
+    // el ahorro disponible no la recorta (a diferencia de la Banda 1).
+    const precioBanda2 = capacidad30;
+    const validoBanda2 = precioBanda2 > 0;
 
     // Paso 6 — resultado final
     const candidatos = [];

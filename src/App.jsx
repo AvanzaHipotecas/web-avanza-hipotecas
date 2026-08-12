@@ -32,6 +32,7 @@ const BrokerVsBanco                  = lazy(() => import('@/pages/blog/BrokerVsB
 const SubrogacionHipotecariaProductPage = lazy(() => import('@/pages/SubrogacionHipotecariaProductPage'));
 const CambioHipotecaPage       = lazy(() => import('@/pages/CambioHipotecaPage'));
 const CalculadoraSubrogacionPage = lazy(() => import('@/pages/CalculadoraSubrogacionPage'));
+const CalculadoraPrivadaPage   = lazy(() => import('@/pages/CalculadoraPrivadaPage'));
 const PoliticaCookiesPage      = lazy(() => import('@/pages/PoliticaCookiesPage'));
 const AvisoLegalPage           = lazy(() => import('@/pages/AvisoLegalPage'));
 const PoliticaPrivacidadPage   = lazy(() => import('@/pages/PoliticaPrivacidadPage'));
@@ -70,6 +71,8 @@ function App() {
             <Route path="/subrogacion-hipotecaria"                             element={<SubrogacionHipotecariaProductPage />} />
             <Route path="/cambio-hipoteca"                                     element={<CambioHipotecaPage />} />
             <Route path="/calculadora-subrogacion"                             element={<CalculadoraSubrogacionPage />} />
+            {/* Ruta privada: acceso solo por URL directa, no enlazar desde Header/Footer/menús ni añadir a sitemap.xml */}
+            <Route path="/calculadora-privada"                                 element={<CalculadoraPrivadaPage />} />
             <Route path="/politica-cookies"                                    element={<PoliticaCookiesPage />} />
             <Route path="/aviso-legal"                                         element={<AvisoLegalPage />} />
             <Route path="/politica-privacidad"                                 element={<PoliticaPrivacidadPage />} />

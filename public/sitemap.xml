@@ -46,6 +46,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://avanzahipotecas.es/blog/broker-hipotecario-vs-banco</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://avanzahipotecas.es/blog/hipoteca-al-100-como-conseguirla-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -69,6 +74,11 @@
     <loc>https://avanzahipotecas.es/blog/que-es-el-euribor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avanzahipotecas.es/blog/subida-euribor-junio-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://avanzahipotecas.es/blog/hipoteca-para-autonomos-2026</loc>

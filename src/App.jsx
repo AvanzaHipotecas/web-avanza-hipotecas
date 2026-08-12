@@ -27,6 +27,8 @@ const HipotecaJoven2026Page       = lazy(() => import('@/pages/blog/HipotecaJove
 const Hipoteca100ComoConseguirlaPage = lazy(() => import('@/pages/blog/Hipoteca100ComoConseguirlaPage'));
 const HipotecaFijaVariableMixtaPage  = lazy(() => import('@/pages/blog/HipotecaFijaVariableMixtaPage'));
 const HipotecaAutonomos              = lazy(() => import('@/pages/blog/HipotecaAutonomos'));
+const SubidaEuribor2026              = lazy(() => import('@/pages/blog/SubidaEuribor2026'));
+const BrokerVsBanco                  = lazy(() => import('@/pages/blog/BrokerVsBanco'));
 const SubrogacionHipotecariaProductPage = lazy(() => import('@/pages/SubrogacionHipotecariaProductPage'));
 const CambioHipotecaPage       = lazy(() => import('@/pages/CambioHipotecaPage'));
 const CalculadoraSubrogacionPage = lazy(() => import('@/pages/CalculadoraSubrogacionPage'));
@@ -63,6 +65,8 @@ function App() {
             <Route path="/blog/hipoteca-al-100-como-conseguirla-2026"         element={<Hipoteca100ComoConseguirlaPage />} />
             <Route path="/blog/hipoteca-fija-variable-mixta-2026"             element={<HipotecaFijaVariableMixtaPage />} />
             <Route path="/blog/hipoteca-para-autonomos-2026"                  element={<HipotecaAutonomos />} />
+            <Route path="/blog/subida-euribor-junio-2026"                    element={<SubidaEuribor2026 />} />
+            <Route path="/blog/broker-hipotecario-vs-banco"                  element={<BrokerVsBanco />} />
             <Route path="/subrogacion-hipotecaria"                             element={<SubrogacionHipotecariaProductPage />} />
             <Route path="/cambio-hipoteca"                                     element={<CambioHipotecaPage />} />
             <Route path="/calculadora-subrogacion"                             element={<CalculadoraSubrogacionPage />} />

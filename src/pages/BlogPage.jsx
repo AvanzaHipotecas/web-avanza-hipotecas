@@ -7,6 +7,28 @@ import { Button } from '@/components/ui/button';
 
 const ARTICLES = [
   {
+    slug: 'broker-hipotecario-vs-banco',
+    title: 'Por qué acudir a un bróker hipotecario en vez de directamente al banco',
+    category: 'Guías',
+    categoryColor: 'bg-blue-100 text-blue-700',
+    excerpt: 'Un banco solo ofrece su propio producto. Un bróker hipotecario compara múltiples entidades, centraliza la gestión y negocia mejores condiciones. Estudio sin coste.',
+    readTime: '7 min',
+    date: '12 agosto 2026',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=75&fm=webp',
+    imageAlt: 'Reunión entre un intermediario hipotecario y un cliente revisando condiciones de financiación',
+  },
+  {
+    slug: 'subida-euribor-junio-2026',
+    title: 'Euríbor junio 2026: sube por tercer mes consecutivo y qué significa para tu hipoteca',
+    category: 'Educación financiera',
+    categoryColor: 'bg-purple-100 text-purple-700',
+    excerpt: 'El BCE sube los tipos de interés por primera vez desde 2023 y el Euríbor encadena tres meses al alza. Qué significa para tu hipoteca variable y qué puedes hacer ahora.',
+    readTime: '7 min',
+    date: '11 junio 2026',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=75&fm=webp',
+    imageAlt: 'Gráficos financieros mostrando la evolución de los tipos de interés',
+  },
+  {
     slug: 'hipoteca-para-autonomos-2026',
     title: 'Hipoteca para autónomos en 2026: cómo conseguirla y qué piden los bancos',
     category: 'Guías',

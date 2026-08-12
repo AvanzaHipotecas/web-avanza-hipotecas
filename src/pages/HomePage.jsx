@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/Hero';
 import Benefits from '@/components/Benefits';
+import BankPartners from '@/components/BankPartners';
 import MortgageTypes from '@/components/MortgageTypes';
 import Trust from '@/components/Trust';
 import FAQ from '@/components/FAQ';
@@ -98,6 +99,7 @@ const HomePage = () => {
       </Helmet>
       <Hero />
       <Benefits />
+      <BankPartners />
       <MortgageTypes />
       <Trust />
       <Contact />

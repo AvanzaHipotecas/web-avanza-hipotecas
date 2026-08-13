@@ -14,10 +14,15 @@
 </IfModule>
 
 <IfModule mod_headers.c>
-  # Cache assets long-term
-  Header set Cache-Control "public, s-maxage=604800, max-age=0"
+  # Default: don't let any cache (browser or shared/CDN) serve a stale
+  # index.html — its filename never changes but the hashed assets it
+  # references do, so a cached index.html can point at files that no
+  # longer exist after a deploy.
+  Header set Cache-Control "no-cache, must-revalidate"
 
+  # Hashed, content-addressed assets: safe to cache for a long time and
+  # immutably, since a content change always produces a new filename.
   <If "%{REQUEST_URI} =~ m#^/assets/.*$#">
-    Header set Cache-Control "public, max-age=604800"
+    Header set Cache-Control "public, max-age=31536000, immutable"
   </If>
 </IfModule>
